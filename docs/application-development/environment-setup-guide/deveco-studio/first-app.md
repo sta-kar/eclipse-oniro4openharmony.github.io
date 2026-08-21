@@ -1,4 +1,4 @@
-# First App
+# Quick start
 
 With DevEco Studio installed and its layout, project structure, and tooling covered in [Workflow](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
 
