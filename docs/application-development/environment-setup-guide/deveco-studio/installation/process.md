@@ -7,9 +7,18 @@
 !!! note
     For application development, developer verification is not required.
 
-You need a Huawei account to download DevEco Studio. For instructions, see [HUAWEI ID Registration and Verification](https://developer.huawei.com/consumer/en/doc/start/registration-and-verification-0000001053628148).
+Before downloading DevEco Studio, you need a Huawei account. For details on registration and identity verification, see:
+[HUAWEI ID Registration and Verification | HUAWEI Developers](https://developer.huawei.com/consumer/en/doc/start/registration-and-verification-0000001053628148)
 
-Identity verification is not required for local Oniro/OpenHarmony application development. Publishing through Huawei services has separate account and verification requirements that are outside the scope of this guide.
+In simple terms, anyone can register for an individual developer account, whether they choose to verify their identity or not. However, certain permissions reportedly require identity verification using an ID document.
+
+According to information from the Huawei developer forum, verified developers gain access to more development resources, training materials, and market promotion. Moreover, only verified developers are allowed to publish applications.
+
+Enterprise developers receive a broader range of services compared to individual developers. Here's a breakdown:
+
+* Individual Developers: App Market, Themes, Product Management, Account, PUSH, New Game Pre-order, Interactive Comments, Social, HUAWEI HiAI, Watch App Market, etc.
+
+* Enterprise Developers: App Market, Themes, Initial Release, Payment, Game Packages, App Market Promotion, Product Management, Games, Account, PUSH, New Game Pre-order, Interactive Comments, Social, HUAWEI HiAI, Watch App Market, Sports & Health, Cloud Testing, Smart Home, etc.
 
 ## Download
 
@@ -18,7 +27,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 !!! info
     You need a Huawei account to download DevEco Studio.
 
-<img src='../../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (x86), and Mac (ARM) installers">
+<img src='../../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
 
 === "Windows"
     Download the Windows installer (`.exe`, listed as "DevEco Studio for Windows").
@@ -47,7 +56,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
-    <img src='../../images/macos_installation.png' alt="dmg window: dragging DevEco-Studio into the Applications folder">
+    <img src='../../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
 
     Wait for the copy to finish, then eject the mounted disk image.
 
@@ -99,8 +108,8 @@ Before setting up your development environment, review the relationship between 
 
 ### DevEco Studio Initial Setup
 
-When you run DevEco Studio for the first time, the setup wizard appears. The wizard is the same on Windows and macOS. The screenshots below are from Windows, but macOS displays the same dialogs with macOS-style window controls.
-<img src='../../images/image7.png'>
+When you run DevEco Studio for the first time, the setup wizard will appear. This first-run wizard is the same on Windows and macOS — the screenshots below are from Windows, but macOS shows the same dialogs (just with macOS-style window chrome instead of the Windows title bar).
+<img src='../../images/deveco_welcome_screen.png'>
 
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
@@ -109,7 +118,7 @@ Select `Do not import settings` (unless migrating from a previous install).
 <img src='../../images/image8.png'>
 
 !!! tip "Behind a proxy?"
-    If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the Basic Setup step below may fail to download Node.js, Ohpm, or SDK components.
+    If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
 
     === "Windows"
         Reach Settings via **File → Settings**.
@@ -117,16 +126,7 @@ Select `Do not import settings` (unless migrating from a previous install).
     === "macOS"
         Reach Settings via **DevEco Studio → Settings** in the menu bar (or the `⌘,` shortcut).
 
-On the **Basic Setup** page, select **Install** for **Node.js** and **Ohpm**.
-<img src='../../images/image9.png'>
-Click **Next** to proceed to the SDK configuration page, and then set the SDK path to an appropriate location.
-<img src='../../images/image10.png'>
-Accept the license agreement.
-<img src='../../images/image11.png'>
-Review the summary and click **Next**.
-<img src='../../images/image12.png'>
-<img src='../../images/image13.png'>
-The environment is now configured.
+The environment configuration is now complete.
 <img src='../../images/image14.png'>
 
 !!! note "Install Relevant APIs"
@@ -137,7 +137,9 @@ The environment is now configured.
       To run applications for OpenHarmony, you also need to install the relevant APIs.
 
       Open **DevEco Studio** and go to:
-      **Tools → SDK Manager → OpenHarmony**, select an API version, and click **Apply** to download it.
+      `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
+
+      You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
 
       > 💡 With **DevEco Studio 6.1**, select **API Version 23** for development.
       >
@@ -147,6 +149,6 @@ The environment is now configured.
 
     </div>
 
-    ![SDK Manager](../images/image18.png){: .center}
+    ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../../images/deveco_api_screen.png){: .center}
 
 After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](../workflow.md) to explore the IDE.

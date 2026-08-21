@@ -7,7 +7,6 @@ The virtual devices downloaded in DevEco Studio's Device Manager are HarmonyOS i
 ## Prerequisites
 
 * **Hardware virtualization** must be enabled — Intel VT-x / AMD-V on Windows (usually a BIOS/UEFI setting). Apple Silicon Macs run the emulator natively; Intel-based Macs do not support emulation in DevEco Studio.
-* You must be **signed in with a Huawei ID** — downloading emulator system images requires an authenticated account.
 * The first time you download a virtual device image, DevEco Studio shows an additional **User Agreement** (HarmonyOS Software License and Service Agreement, plus the User Experience Improvement Program notice) that you need to accept.
 
 <img src='../images/emulator_user_agreement.png' alt="User Agreement dialog with HarmonyOS Software License and User Experience Improvement Program checkboxes">
@@ -34,7 +33,7 @@ Device Manager's **Your Devices** page lists existing emulators under the **Loca
 <img src='../images/emulator_device_configuration.png' alt="Virtual Device Configure screen with name, screen profile, boot options, RAM and ROM fields">
 
 !!! tip "Match the API level to your project"
-    The emulator's API level must be at least the project's `compatibleSdkVersion`, and its release type must match the project. `compileSdkVersion` can be newer than the device when the application does not use unavailable APIs.
+    If the emulator's API level is lower than your module's `compatibleSdkVersion`/`compileSdkVersion`, install/run can fail or behave inconsistently. Keep at least one emulator matching your project's target API.
 
 ### Boot Modes
 

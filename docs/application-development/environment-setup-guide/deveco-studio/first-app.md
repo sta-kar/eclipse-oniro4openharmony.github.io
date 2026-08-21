@@ -123,24 +123,7 @@ You can save a filter configuration instead of re-entering it in every session.
 
 ### Profiler
 
-Open **View → Tool Windows → Profiler** (or the toolbar icon) while the app is running to attach the profiler. It has separate tabs:
-
-| Tab | What it shows |
-|---|---|
-| CPU | Method-level call tree and flame chart during a recorded trace, to find hot functions |
-| Memory | Live heap size, allocation tracking, and the ability to trigger/inspect a heap snapshot to hunt leaks |
-| Network | Individual requests, timing, and payload size for HTTP(S) traffic made by the app |
-| Energy (where available) | Coarse indicators of what's driving power usage (radio, CPU, GPS) |
-
-!!! note "Profiling overhead"
-    Recording detailed CPU traces or full allocation tracking adds overhead and will skew timings somewhat. Use a lighter sampling mode first to find the general area of a problem, then a detailed trace to zoom in.
-
-### A Practical Workflow
-
-1. Reproduce the issue once without diagnostic tools attached to establish its symptoms.
-2. For a logic bug, set a conditional breakpoint near the suspected cause and step through the relevant code.
-3. For a performance problem, record a CPU trace that covers only the slow interaction. Shorter traces are easier to read than a trace of the entire session.
-4. For a crash under load or after prolonged use, check the Memory view for retained size that grows steadily across repeated actions. This pattern commonly indicates a leak.
+Once your app is up and running, **View → Tool Windows → Profiler** (or the toolbar icon) attaches CPU, memory, network, and energy profiling to the running app — reach for it when you actually have a performance problem to chase down, rather than as a first-app concern.
 
 ## Build Variants and Signing
 
@@ -194,18 +177,11 @@ Two errors are common enough to call out specifically (both also covered in [Com
 * **`compatibleSdkVersion`/`releaseType` mismatch with the device** — the minimum compatible SDK or release type does not match the target. Lower `compatibleSdkVersion` if the application does not require newer APIs, or use a matching device/emulator.
 * **Install failed due to "grant request permissions failed"** — the requested permission's level (`system_basic` or `system_core`) requires the ACLs be explicitly listed in the provisioning profile used for signing. Check [this permissions reference](https://gitcode.com/openharmony/resources/blob/master/systemres/main/config.json) for the level of each permission your `module.json5` requests, and make sure your signing profile grants it.
 
-### A Practical Checklist Before Distributing a Build
-
-1. Confirm that you are building the **release** variant, not the debug variant.
-2. Confirm the signing config references a certificate meant for distribution, not the auto-generated debug one.
-3. Bump `versionCode`/`versionName` in `AppScope/app.json5` if this is an update to a previously distributed build.
-4. Do a clean install test on a device that was never used for debug builds of this app, to rule out state left over from development.
-
 ## Common Issues and Solutions
 
 ### Cannot Find a Phone Emulator
 
-Open the module configuration file at `entry\src\main\module.json5` and check `deviceTypes`. A HarmonyOS phone target requires `phone`. For an OpenHarmony/Oniro target, keep `default` and use the Oniro emulator rather than changing the runtime's device type to `phone`.
+`entry/src/main/module.json5` is the configuration file for the module. Check `deviceTypes` and add `phone` if it is missing.
 
 ![alt text](images/SDK-11.png)
 
