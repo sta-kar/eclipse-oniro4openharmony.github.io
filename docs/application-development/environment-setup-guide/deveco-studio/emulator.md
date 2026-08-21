@@ -44,7 +44,7 @@ Device Manager's **Your Devices** page lists any emulators you've already create
 * **Cold boot** — starts the emulator from a clean state every time. Slower, but useful when you need to rule out state left over from a previous run.
 * **Quick boot** — resumes from a saved snapshot, which is much faster for everyday iteration.
 
-If an emulator becomes unresponsive or gets into a broken state (e.g. the "Unable to find BMS Service" issue described in [Common Issues and Solutions](../common-issues.md)), a cold boot or wiping its data is usually the fastest fix.
+If an emulator becomes unresponsive or gets into a broken state (e.g. the "Unable to find BMS Service" issue described in [Common Issues and Solutions](first-app.md#common-issues-and-solutions)), a cold boot or wiping its data is usually the fastest fix.
 
 ## Running Your App on the Emulator
 
@@ -62,7 +62,7 @@ Physical devices generally give more representative performance and let you test
 3. Accept the debugging authorization prompt on the device the first time it connects.
 4. The device should now appear in DevEco Studio's target device dropdown in the toolbar.
 
-If the device isn't detected, check the USB connection troubleshooting steps in [Common Issues and Solutions](../common-issues.md) — unstable USB power management is a common culprit on Windows.
+If the device isn't detected, check the USB connection troubleshooting steps in [Common Issues and Solutions](first-app.md#common-issues-and-solutions) — unstable USB power management is a common culprit on Windows.
 
 ## Using `hdc` from the Terminal
 
@@ -93,6 +93,6 @@ hdc install ./entry-default-signed.hap
 * **Emulator won't start / black screen** — confirm virtualization is enabled in BIOS/UEFI (Windows), and check that no other virtualization software (Hyper-V, VirtualBox, etc.) is conflicting with it.
 * **Slow performance** — close unused emulators, allocate more RAM/CPU cores to the virtual device in its configuration, and prefer a lower-resolution device profile for quick UI checks.
 * **System image download stuck or failing** — some system images are region-restricted, so double-check your account/region settings, and verify your network/proxy configuration.
-* **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](../common-issues.md).
+* **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
 
 Next: run the app and diagnose problems in [First App](first-app.md#debugging-and-profiling).
