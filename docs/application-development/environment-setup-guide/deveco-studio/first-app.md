@@ -1,4 +1,4 @@
-# First App
+# Quick start
 
 With DevEco Studio installed and its layout, project structure, and tooling covered in [Workflow](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
 
@@ -170,68 +170,4 @@ Once a signing configuration is in place:
 
 Build output appears under the module's `build/` directory, and the **Build** tool window (`Alt+0`) shows progress and any failures.
 
-### Diagnosing Signing/Permission Errors
-
-Two errors are common enough to call out specifically (both also covered in [Common Issues and Solutions](#common-issues-and-solutions) below):
-
-* **`compatibleSdkVersion`/`releaseType` mismatch with the device** — the minimum compatible SDK or release type does not match the target. Lower `compatibleSdkVersion` if the application does not require newer APIs, or use a matching device/emulator.
-* **Install failed due to "grant request permissions failed"** — the requested permission's level (`system_basic` or `system_core`) requires the ACLs be explicitly listed in the provisioning profile used for signing. Check [this permissions reference](https://gitcode.com/openharmony/resources/blob/master/systemres/main/config.json) for the level of each permission your `module.json5` requests, and make sure your signing profile grants it.
-
-## Common Issues and Solutions
-
-### Cannot Find a Phone Emulator
-
-`entry/src/main/module.json5` is the configuration file for the module. Check `deviceTypes` and add `phone` if it is missing.
-
-![alt text](images/SDK-11.png)
-
-### Unable to Find the BMS Service When Running on an Emulator
-
-Wait for the emulator to finish starting. If the problem persists, clear the virtual device's data or create a new virtual device.
-
-### Unstable USB Connection or Development Board Not Detected by the IDE
-
-Change the USB power-management settings as follows:
-
-1. Search for and open *Device Manager*.
-2. Click to expand *Universal Serial Bus Controllers*.
-3. Right-click *USB Root Hub* and select *Properties*.
-4. Uncheck *Power Management* and click *OK*.
-<div>
-    <figure >
-        <img src="../images/SDK-12.png"  width="260"/><img src="../images/SDK-13.png"  width="260"/>
-    </figure>
-</div>
-
-### Application `compatibleSdkVersion` and `releaseType` Do Not Match the Device's `apiVersion` and `releaseType`
-
-**Cause:** The application's minimum compatible SDK version is higher than the device API version, or the release types differ.
-
-**Solution:**
-
-1. Open the project-level `build-profile.json5` file.
-2. Set `compatibleSdkVersion` to an API level supported by the device, provided that the application does not require newer APIs. Ensure that `runtimeOS` and the SDK release type match the device.
-3. Synchronize the project and run the application again.
-   <img title="" src="../images/SDK-14.png" alt="" width="294">
-
-### Install Failed
-
-When you click **Run** with a device connected and detected by the IDE, the IDE may display the following message:
-
-"Install Failed: failed to install bundle. code: 9568289, error: install failed due to grant request permissions failed."
-
-<img title="" src="../images/SDK-15.png" alt="" width="467">
-
-This message indicates a permissions problem. Identify the permission that caused it.
-
-[This documentation](https://gitcode.com/openharmony/resources/blob/master/systemres/main/config.json) lists all permissions and their levels in OpenHarmony.
-
-OpenHarmony request permissions have three levels, from lowest to highest: `normal`, `system_basic`, and `system_core`.
-
-If `availableLevel` is set to `system_basic`, configure the `acls` field in `UnsignedReleasedProfileTemplate.json` and add the required high-level permissions.
-
-Use a signing profile that grants the required ACLs and reference its `.p7b` file from the signing configuration in `build-profile.json5`. The automatically generated normal-application profile cannot grant `system_basic` or `system_core` permissions.
-
-<img title="" src="../images/SDK-16.png" >
-
-After creating, previewing, running, debugging, and packaging the application, continue to [Emulator](emulator.md) if you have not configured one, or return to [Workflow](workflow.md) for a closer look at the IDE.
+With your first app created, previewed, run, debugged, and packaged, head to [Emulator](emulator.md) if you haven't already set one up, or back to [Workflow](workflow.md) for a closer look at the IDE itself.
