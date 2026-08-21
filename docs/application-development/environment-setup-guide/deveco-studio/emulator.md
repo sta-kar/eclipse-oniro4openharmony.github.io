@@ -30,8 +30,14 @@ Device Manager's **Your Devices** page lists any emulators you've already create
 6. Click **Finish** to create it.
 <img src='../images/emulator_device_configuration.png' alt="Virtual Device Configure screen with name, screen profile, boot options, RAM and ROM fields">
 
-!!! tip "Match the API level to your project"
-    If the emulator's API level is lower than your module's `compatibleSdkVersion`/`compileSdkVersion`, install/run can fail or behave inconsistently. Keep at least one emulator matching your project's target API.
+!!! tip "compileSdkVersion vs. compatibleSdkVersion vs. targetSdkVersion"
+    These fields live in each module's `build-profile.json5` and are easy to mix up:
+
+    * **`compileSdkVersion`** — the API level used to *compile* the app. It controls which APIs are available at build time and has no direct bearing on which emulator or device can actually run the app.
+    * **`compatibleSdkVersion`** — the *minimum* API level the app can run on. This is the one that actually gates installation: if an emulator's API level is lower than `compatibleSdkVersion`, install/run will fail. In most OpenHarmony projects it's set to the same value as `compileSdkVersion`.
+    * **`targetSdkVersion`** — the API level the app is designed and tested against; running on a higher level than this is fine, but the app won't opt into behavior changes introduced above it. This field is mainly a HarmonyOS (Huawei's downstream distribution) addition and isn't always present in plain OpenHarmony projects.
+
+    In practice: keep at least one emulator matching (or above) your module's `compatibleSdkVersion`, so install/run never fails due to a version mismatch.
 
 ### Boot Modes
 
