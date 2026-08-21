@@ -127,7 +127,7 @@ Select `Do not import settings` (unless migrating from a previous install).
         Reach Settings via **DevEco Studio → Settings** in the menu bar (or the `⌘,` shortcut).
 
 The environment configuration is now complete.
-<img src='../../images/image14.png'>
+<img src='../../images/deveco_starting_screen.png'>
 
 !!! note "Install Relevant APIs"
 

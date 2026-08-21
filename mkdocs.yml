@@ -53,7 +53,7 @@ nav:
       - Development Overview: application-development/index.md
       - Environment Setup Guide: 
         - Overview: application-development/environment-setup-guide/index.md
-        - DevEcoStudio:
+        - DevEco Studio:
           - Installation:
             - System Requirements: application-development/environment-setup-guide/deveco-studio/installation/system-requirements.md
             - Process of Installation: application-development/environment-setup-guide/deveco-studio/installation/process.md
