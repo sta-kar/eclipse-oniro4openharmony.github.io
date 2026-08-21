@@ -1,36 +1,37 @@
-# Installing the tools
+# Installing the Tools
 
-For Oniro IDE, you can get it either from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?ItemName=oniro.oniro-app-ide)or [VSX Registry](https://open-vsx.org/extension/oniro/oniro-app-ide).
+Install Oniro IDE from either the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?ItemName=oniro.oniro-app-ide) or the [Open VSX Registry](https://open-vsx.org/extension/oniro/oniro-app-ide).
 
-For Oniro App Builder follow the instructions on [github](https://github.com/eclipse-oniro4openharmony/oniro-app-builder).
+To install Oniro App Builder, follow the instructions on [GitHub](https://github.com/eclipse-oniro4openharmony/oniro-app-builder).
 
-> Make sure that you have JRE installed as it is needed for app signing.
+Oniro App Builder requires Node.js 20 or later. Install it with `npm install -g @oniroproject/oniro-app`. The `oniro-app sign` command also requires a JDK on `PATH` because it uses both `java` and `keytool`.
 
-# Downloading SDK and command-line tools
+# Downloading the SDK and Command-Line Tools
 
-To get the full functionality you need to install command-line tools and SDK version compatible with your target device.
+For full functionality, install the command-line tools and an SDK version compatible with your target device.
 
 !!! note
-    On Windows or MacOS only dowload SDK for now, downloading command-line tools for these systems is covered in the next section.
+    On Windows or macOS, download only the SDK at this stage. The next section explains how to download the command-line tools for these systems.
 
-> the emulator runs OpenHarmony 6.1 (API level 23)
+> The emulator runs OpenHarmony 6.1 (API level 23).
 
-In IDE use the "SDK manager" tab. 
+In Oniro IDE, open the **SDK Manager** tab.
 
 <div style="text-align:center">
     <img src='../images/download-sdk.png'>
 </div> 
 
-For App Builder run:
+For Oniro App Builder, install the SDK with:
 
-- `oniro-app cmdtools install`
 - `oniro-app sdk install 6.1` (or another version)
 
-## Command-line Tools on Windows and MacOS
+On Linux, install the command-line tools with `oniro-app cmdtools install`. On Windows and macOS, use the ZIP procedure below.
 
-Command-line tools for Windows and MacOS can't be downloaded automatically. You'll need to download them yourself from [Huawei developer portal](https://developer.huawei.com/consumer/en/download/).
+## Command-Line Tools on Windows and macOS
 
-In IDE click `Install` in the command-line tools box in `SDK manager` tab, and you'll be prompted to provide the zip file downloaded from Huawei developer portal.
+The command-line tools for Windows and macOS cannot be downloaded automatically. Download them from the [Huawei Developer website](https://developer.huawei.com/consumer/en/download/).
+
+In Oniro IDE, click **Install** in the command-line tools box on the **SDK Manager** tab. When prompted, select the ZIP archive that you downloaded from the Huawei Developer website.
 
 <div style="text-align:center">
     <img src='../images/cmd-tools-install.png'>
@@ -42,23 +43,27 @@ In IDE click `Install` in the command-line tools box in `SDK manager` tab, and y
 
 With Oniro App Builder, run `oniro-app cmdtools install --from-zip <path to your zip>`.
 
-# Downloading the emulator
+# Downloading the Emulator
 
-> Your machine needs to have [KVM](https://linux-kvm.org/page/Main_Page) enabled
+The emulator requires QEMU and uses a host-specific accelerator:
 
-> It can cause some issues if your window manager forces the QEMU window into a certain size. If you're having trouble, make sure that QEMU window is floating and isn't being rescaled.
+- Linux: KVM must be enabled and accessible to the current user.
+- Windows: enable Windows Hypervisor Platform. The launcher also requires Git Bash, MSYS2, or Cygwin.
+- macOS: Intel Macs use Hypervisor.framework; Apple Silicon Macs use TCG emulation, which is slower.
 
-First, install [QEMU](https://www.qemu.org/download/#linux)
+> A window manager that forces the QEMU window to a fixed size can cause display problems. If you encounter problems, ensure that the QEMU window is floating and is not being resized automatically.
+
+First, install [QEMU](https://www.qemu.org/download/) and ensure that `qemu-system-x86_64` is on `PATH`.
 
 ## Inside IDE or App Builder
 
-You can download the emulator inside the "SDK manager" tab in IDE, and manage it using the "Start Emulator" and "Stop Emulator" buttons.
+Download the emulator from the **SDK Manager** tab in Oniro IDE. Use the **Start Emulator** and **Stop Emulator** buttons to manage it.
 
 <div style="text-align:center">
     <img src='../images/download-emulator.png'>
 </div> 
 
-With App Builder, you'll need the following commands:
+With Oniro App Builder, use the following commands:
 
 - `oniro-app emulator install`
 - `oniro-app emulator start`
@@ -66,4 +71,4 @@ With App Builder, you'll need the following commands:
 
 ## Standalone
 
-You can also download the emulator yourself [here](https://github.com/eclipse-oniro4openharmony/device_board_oniro/releases/latest/download/oniro_emulator.zip). After extracting the .zip file, inside you'll find a `run.sh` script that starts the emulator.
+You can also [download the emulator directly](https://github.com/eclipse-oniro4openharmony/device_board_oniro/releases/latest/download/oniro_emulator.zip). After extracting the ZIP archive, run `run.sh` on Linux or macOS, or `run.bat` on Windows.

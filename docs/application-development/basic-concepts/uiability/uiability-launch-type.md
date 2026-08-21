@@ -70,7 +70,7 @@ To use the multiton mode, set **launchType** in the `module.json5` file to **mul
 
 The **specified** mode is used in some special scenarios. For example, in a document application, you may want a document instance to be created each time you create a document, and you may also want to use the same document instance when you open an existing document.
 
-**Figure 3** Demonstration effect in specified mode
+**Figure 3:** Demonstration of specified mode
 
 <div style="text-align:center">
     <img src='../images/v4.gif'>
@@ -78,4 +78,4 @@ The **specified** mode is used in some special scenarios. For example, in a docu
 
 In the following example, there are two UIAbility components: EntryAbility and SpecifiedAbility (with the launch type **specified**). 
 
-You can learn more about `Specified` from [this](https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-5.1.0-Release/en/application-dev/application-models/uiability-launch-type.md#singleton) source.
+You can learn more about `Specified` from [the OpenHarmony launch-type documentation](https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-5.1.0-Release/en/application-dev/application-models/uiability-launch-type.md#specified).
