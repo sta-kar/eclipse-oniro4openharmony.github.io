@@ -123,24 +123,7 @@ You can also save a filter configuration so you don't have to re-type it every s
 
 ### Profiler
 
-Open **View → Tool Windows → Profiler** (or the toolbar icon) while the app is running to attach the profiler. It has separate tabs:
-
-| Tab | What it shows |
-|---|---|
-| CPU | Method-level call tree and flame chart during a recorded trace, to find hot functions |
-| Memory | Live heap size, allocation tracking, and the ability to trigger/inspect a heap snapshot to hunt leaks |
-| Network | Individual requests, timing, and payload size for HTTP(S) traffic made by the app |
-| Energy (where available) | Coarse indicators of what's driving power usage (radio, CPU, GPS) |
-
-!!! note "Profiling overhead"
-    Recording detailed CPU traces or full allocation tracking adds overhead and will skew timings somewhat. Use a lighter sampling mode first to find the general area of a problem, then a detailed trace to zoom in.
-
-### A Practical Workflow
-
-1. Reproduce the issue once without any tooling attached, so you know what "broken" looks like.
-2. If it's a logic bug, set a conditional breakpoint close to the suspected cause and step from there.
-3. If it's a performance issue, record a CPU trace covering just the slow interaction, not the whole session — shorter traces are far easier to read.
-4. If it's a crash under load or over time, check Memory for steadily growing retained size across repeated actions — a classic leak signature.
+Once your app is up and running, **View → Tool Windows → Profiler** (or the toolbar icon) attaches CPU, memory, network, and energy profiling to the running app — reach for it when you actually have a performance problem to chase down, rather than as a first-app concern.
 
 ## Build Variants and Signing
 
@@ -194,28 +177,21 @@ Two errors are common enough to call out specifically (both also covered in [Com
 * **`compileSdkVersion`/`releaseType` mismatch with the device** — the compiled SDK version is newer than what the target device supports. Lower the compiled version in the relevant `build-profile.json5`, or target a newer device/emulator.
 * **Install failed due to "grant request permissions failed"** — the requested permission's level (`system_basic` or `system_core`) requires the ACLs be explicitly listed in the provisioning profile used for signing. Check [this permissions reference](https://gitcode.com/openharmony/resources/blob/master/systemres/main/config.json) for the level of each permission your `module.json5` requests, and make sure your signing profile grants it.
 
-### A Practical Checklist Before Distributing a Build
-
-1. Confirm you're building the **release** variant, not debug.
-2. Confirm the signing config references a certificate meant for distribution, not the auto-generated debug one.
-3. Bump `versionCode`/`versionName` in `AppScope/app.json5` if this is an update to a previously distributed build.
-4. Do a clean install test on a device that was never used for debug builds of this app, to rule out state left over from development.
-
 ## Common Issues and Solutions
 
 ### Cannot find the emulator of a phone device
 
-`entry\src\main\module.json5` is the configuration file for the module, check `deviceTypes`, add `phone` if it is missing.
+`entry/src/main/module.json5` is the configuration file for the module. Check `deviceTypes` and add `phone` if it is missing.
 
 ![alt text](../images/SDK-11.png)
 
 ### Unable to find BMS Service when running on Emulator
 
-Just wait for an extended period, or try clearing data of this device or creating a new device.
+Just wait a while, or try clearing this device's data or creating a new one.
 
 ### Unstable USB connection, dev board not detected by IDE
 
-solution worked for me:
+Solution:
 
 Change USB Power Management Settings
 
@@ -231,30 +207,30 @@ Change USB Power Management Settings
 
 ### compileSdkVersion and releaseType of the app do not match the apiVersion and releaseType on the device
 
-Reason: The compiled SDK version is higher than the actual device.
+Reason: The compiled SDK version is higher than the version supported by the actual device.
 
 Solution:
-Step 1: Modify build\_profile.json5 under entry and set apiType to faMode.
-Step 2: Modify build\_profile.json5 under the project, change the compiled version to a lower version.
+Step 1: Modify `build-profile.json5` under `entry` and set `apiType` to `faMode`.
+Step 2: Modify `build-profile.json5` under the project and change the compiled version to a lower version.
 Run again, and the problem will be resolved.
    <img title="" src="../images/SDK-14.png" alt="" width="294">
 
 ### Install Failed
 
-Have the device connected and detected by IDE, click on "run", the IDE gives the error messages:
+With the device connected and detected by the IDE, click **Run**; the IDE shows the following error message:
 "Install Failed : failed to install bundle. code: 9568289, error: install failed due to grant request permissions failed."
 
 <img title="" src="../images/SDK-15.png" alt="" width="467">
 
-It should be a permission issue, and now we need to identify the permissions causing the problem.
+This is likely a permission issue — the next step is to identify which permission is causing it.
 
 [This documentation](https://gitcode.com/openharmony/resources/blob/master/systemres/main/config.json) lists all permissions and their levels in OpenHarmony.
 
-There are three types of permissions used in OpenHarmony for requests, ordered from low to high: normal, system\_basic, system\_core.
+There are three types of permissions used in OpenHarmony for requests, ordered from low to high: `normal`, `system_basic`, `system_core`.
 
-If the permission level is set to "availableLevel": "system\_basic", then you need to configure the acls field in the UnsignedReleasedProfileTemplate.json file and include the required high-level permissions in acls. The specific steps are as follows:
+If the permission level is set to `"availableLevel": "system_basic"`, then you need to configure the `acls` field in the `UnsignedReleasedProfileTemplate.json` file and include the required high-level permissions in `acls`. The specific steps are as follows:
 
-set the "profile" with p7b file generated from java \-c commands in build-profile.json5
+Set the `profile` field in `build-profile.json5` to the p7b file generated by the `java -c` command.
 
 <img title="" src="../images/SDK-16.png" >
 

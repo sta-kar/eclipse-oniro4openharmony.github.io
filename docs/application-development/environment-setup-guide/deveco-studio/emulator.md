@@ -5,7 +5,6 @@ Once your UI looks right in the Previewer (see [First App](first-app.md)), the n
 ## Prerequisites
 
 * **Hardware virtualization** must be enabled — Intel VT-x / AMD-V on Windows (usually a BIOS/UEFI setting). Apple Silicon Macs run the emulator natively; Intel-based Macs do not support emulation in DevEco Studio.
-* You must be **signed in with a Huawei ID** — downloading emulator system images requires an authenticated account.
 * The first time you download a virtual device image, DevEco Studio shows an additional **User Agreement** (HarmonyOS Software License and Service Agreement, plus the User Experience Improvement Program notice) that you need to accept.
 
 <img src='../images/emulator_user_agreement.png' alt="User Agreement dialog with HarmonyOS Software License and User Experience Improvement Program checkboxes">
@@ -33,9 +32,6 @@ Device Manager's **Your Devices** page lists any emulators you've already create
 
 !!! tip "Match the API level to your project"
     If the emulator's API level is lower than your module's `compatibleSdkVersion`/`compileSdkVersion`, install/run can fail or behave inconsistently. Keep at least one emulator matching your project's target API.
-
-!!! note "Limited device types available?"
-    If Device Manager only offers a narrow set of device types, your DevEco Studio region setting may be restricting them — see [Enabling Additional Device Types](installation/process.md#enabling-additional-device-types).
 
 ### Boot Modes
 
@@ -90,7 +86,7 @@ hdc install ./entry-default-signed.hap
 
 * **Emulator won't start / black screen** — confirm virtualization is enabled in BIOS/UEFI (Windows), and check that no other virtualization software (Hyper-V, VirtualBox, etc.) is conflicting with it.
 * **Slow performance** — close unused emulators, allocate more RAM/CPU cores to the virtual device in its configuration, and prefer a lower-resolution device profile for quick UI checks.
-* **System image download stuck or failing** — check the region setting from [Enabling Additional Device Types](installation/process.md#enabling-additional-device-types) (some system images are region-restricted) and verify your network/proxy configuration.
+* **System image download stuck or failing** — some system images are region-restricted, so double-check your account/region settings, and verify your network/proxy configuration.
 * **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
 
 Next: run the app and diagnose problems in [First App](first-app.md#debugging-and-profiling).
