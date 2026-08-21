@@ -60,6 +60,7 @@ nav:
           - Workflow: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
+          - Connecting a real device: application-development/environment-setup-guide/deveco-studio/real-device.md
         - Oniro IDE & App Builder:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
             - Creating a Project: application-development/environment-setup-guide/oniro/create-project.md
