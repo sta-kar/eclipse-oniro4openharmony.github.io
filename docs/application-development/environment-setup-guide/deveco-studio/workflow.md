@@ -1,6 +1,6 @@
 # Workflow
 
-This page is about what and where everything is: the IDE's window layout, what DevEco Studio generates for a new project, the editor tooling that speeds up day-to-day coding, and the built-in Git integration.
+This page describes the IDE window layout, the files that DevEco Studio generates for a new project, editor tools that streamline daily development, and the built-in Git integration.
 
 ## Interface Tour
 
@@ -10,7 +10,7 @@ DevEco Studio is built on the IntelliJ Platform, so if you have used Android Stu
 
 When no project is open, DevEco Studio shows the **Welcome** screen with:
 
-* **New Project** – start a project from an OpenHarmony/HarmonyOS template (Empty Ability, Native C++, and more).
+* **New Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
 * **Open** – open an existing project directory.
 * **Get from VCS** – clone a Git repository directly.
 * A list of recently opened projects.
@@ -59,11 +59,11 @@ Before learning where every tool window lives, these are the five shortcuts wort
 | Reformat code | `Ctrl+Alt+L` |
 | Find usages | `Alt+F7` |
 
-Getting comfortable with **Search Everywhere** (double `Shift`) is the single highest-leverage habit — it can open files, jump to a settings page, or run an IDE action without hunting through menus.
+**Search Everywhere** (double `Shift`) can open files, jump to a settings page, or run an IDE action without navigating through menus.
 
 ## Project Structure
 
-When DevEco Studio creates a new project from a template, it generates a fair number of files. Understanding what each one does will save you a lot of confusion later, especially when something needs to be configured by hand instead of through a wizard.
+When DevEco Studio creates a project from a template, it generates many files. Understanding their purposes makes manual configuration easier when a wizard is not available.
 
 ### Stage Model vs. FA Model
 
@@ -108,12 +108,12 @@ MyApplication/
 
 Settings that apply to the whole application, not just one module:
 
-* `app.json5` — bundle name, vendor, version code/name, minimum/target/compatible API levels.
+* `app.json5` — bundle name, vendor, version code/name, application icon, and application label.
 * `resources/` — app-wide resources such as the app icon and label, shared across all modules.
 
 #### entry Module
 
-`entry` is the default **module** created for you — most simple apps only ever need this one module. Larger apps can add further modules (feature modules, shared libraries) alongside it.
+`entry` is the default **module**. Most simple applications need only this module, while larger applications can add feature modules or shared libraries alongside it.
 
 | File/Folder | Purpose |
 |---|---|
@@ -123,21 +123,21 @@ Settings that apply to the whole application, not just one module:
 | `src/main/resources/en_US/`, `zh_CN/`, ... | Locale-specific resource overrides |
 | `src/main/resources/rawfile/` | Raw assets bundled as-is, accessed by path rather than resource ID |
 | `module.json5` | Module-level manifest: `deviceTypes`, abilities, requested permissions, module name/type |
-| `build-profile.json5` | Module-level build configuration: target SDK/compile API, product flavors, signing config reference |
+| `build-profile.json5` | Module-level build configuration, including build options and module targets |
 | `oh-package.json5` | Module's dependencies, similar in spirit to `package.json` |
 
 !!! note "Where `deviceTypes` matters"
-    If your app refuses to show up as a run target for a certain emulator (e.g. "phone" not listed), check `deviceTypes` in `module.json5` — this is the same issue documented in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
+    If your app refuses to show up as a run target for a certain emulator, check `deviceTypes` in `module.json5`. HarmonyOS phone projects use `phone`; OpenHarmony projects use `default` (and can also list supported form factors such as `tablet`). This is the same issue documented in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
 
 #### Project-Level Files
 
-* `build-profile.json5` (root) — declares the products/targets and which modules/signing configs they use.
+* `build-profile.json5` (root) — declares products, SDK compatibility and compilation versions, signing configurations, build modes, and modules.
 * `oh-package.json5` (root) — workspace-level dependency declarations and the `oh_modules` resolution behavior.
 * `hvigorfile.ts` — the build script for **Hvigor**, OpenHarmony's build system (conceptually similar to a Gradle build script).
 
 ### Where the IDE Keeps Its Own State
 
-Two folders are IDE/tooling-generated and should **not** be committed to version control:
+The following IDE/tooling-generated paths should **not** be committed to version control:
 
 | Folder | Contents |
 |---|---|
@@ -160,7 +160,7 @@ As you type, DevEco Studio suggests:
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
 !!! tip "Smart completion"
-    `Ctrl+Shift+Space` narrows suggestions to what's actually valid at the cursor (e.g. only types assignable to the expected parameter), which is more useful than basic completion (`Ctrl+Space`) once a project grows.
+    `Ctrl+Shift+Space` narrows suggestions to those valid at the cursor, such as types assignable to the expected parameter. This is more useful than basic completion (`Ctrl+Space`) as a project grows.
 
 ### Navigating Code
 
@@ -176,7 +176,7 @@ Refactoring tools rewrite code across the whole project consistently, not just i
 * **Safe Delete** — checks for remaining usages before deleting a declaration, refusing (or warning) if something still depends on it.
 
 !!! warning "Review before committing a rename"
-    Renames across resource strings or files referenced by relative path aren't always fully tracked. After a large rename, run a project-wide search (`Ctrl+Shift+F`) for the old name before committing, just to be safe.
+    Renames across resource strings or files referenced by relative paths are not always fully tracked. After a large rename, run a project-wide search (`Ctrl+Shift+F`) for the old name before committing.
 
 ### Inspections and Quick Fixes
 
@@ -187,7 +187,7 @@ The editor continuously analyzes your code and underlines potential issues:
 
 Press `Alt+Enter` on a highlighted piece of code to see quick fixes — importing a missing symbol, adding a missing `@State`, or suppressing a specific inspection.
 
-The full, aggregated list of issues across the project is available in the **Problems** tool window, which is often faster than hunting file by file after a large change.
+The **Problems** tool window provides an aggregated list of issues across the project, which is faster than inspecting every file after a large change.
 
 ### Live Templates
 
@@ -214,14 +214,14 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 * A commit message box, plus **Commit** and **Commit and Push** buttons.
 
 !!! tip "Review before committing"
-    Click through each changed file's diff in the Commit window before committing — it's the same discipline as `git diff` before `git add`, just inline with the editor.
+    Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
 
 ### Branch Management
 
-The branch indicator in the bottom-right status bar opens a menu to checkout, create, rename, or merge branches without a terminal. It also shows incoming/outgoing commit counts once you've fetched.
+The branch indicator in the lower-right status bar opens a menu for checking out, creating, renaming, or merging branches without a terminal. After you fetch, it also shows incoming and outgoing commit counts.
 
 !!! note "Fetch vs. Update"
-    **Update Project** (`Ctrl+T`) fetches and merges/rebases according to your configured settings in one step. If you only want to see what's changed remotely without touching your working tree yet, use **Git → Fetch** instead.
+    **Update Project** (`Ctrl+T`) fetches and merges or rebases according to your configured settings. To inspect remote changes without modifying the working tree, use **Git → Fetch** instead.
 
 ### Resolving Conflicts
 
@@ -254,7 +254,7 @@ local.properties
 ```
 
 !!! warning "Check history for secrets before pushing publicly"
-    If a keystore or credentials file was ever committed before adding it to `.gitignore`, adding the ignore rule alone does not remove it from history. You'd need to purge it from history (e.g. with `git filter-repo`) and rotate the exposed credentials — treat anything committed as compromised.
+    If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
 
 ### A Reasonable Day-to-Day Flow
 
