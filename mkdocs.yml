@@ -58,7 +58,7 @@ nav:
             - System Requirements: application-development/environment-setup-guide/deveco-studio/installation/system-requirements.md
             - Process of Installation: application-development/environment-setup-guide/deveco-studio/installation/process.md
           - Workflow: application-development/environment-setup-guide/deveco-studio/workflow.md
-          - First App: application-development/environment-setup-guide/deveco-studio/first-app.md
+          - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
         - Oniro IDE & App Builder:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
