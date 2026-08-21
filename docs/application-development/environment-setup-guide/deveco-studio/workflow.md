@@ -34,20 +34,17 @@ Once a project is open, the main window is split into the following regions:
     * **Project** – the raw directory structure on disk.
     * **Project Files** – filters out most build/IDE metadata so only source-relevant files remain.
 
-### Key Tool Windows
+### Essential Shortcuts
 
-| Tool window | Default shortcut | What it's for |
-|---|---|---|
-| Project | `Alt+1` | Browse and manage project files |
-| Previewer | — (opens automatically for `.ets` pages) | Live rendering of the current ArkUI page |
-| Terminal | `Alt+F12` | Embedded shell, useful for `ohpm` and `hdc` commands |
-| Log / HiLog | — | Device/emulator log output, filterable by tag and level |
-| Build | `Alt+0` | Output of Gradle-like Hvigor build tasks |
-| Version Control | `Alt+9` | Git status, commit dialog, history, diff viewer |
-| Device Manager | — | Create and launch emulators |
-| Profiler | — | CPU, memory, network, and energy profiling of a running app |
-| Problems | — | Aggregated inspection warnings/errors across the project |
-| TODO | — | Collects `// TODO` comments across the codebase |
+Before learning where every tool window lives, these are the five shortcuts worth memorizing on day one:
+
+| Shortcut | What it does |
+|---|---|
+| `Ctrl+F` | Find text in the current file |
+| `Ctrl+S` | Save all files |
+| `Shift+F10` | Run the app |
+| `Shift+F9` | Debug the app |
+| `Ctrl+Z` | Undo the last change |
 
 !!! note "Shortcuts differ per keymap"
     The shortcuts above use the default Windows/Linux keymap. macOS uses `Cmd` instead of `Ctrl` for most bindings. You can inspect or change any binding under **Settings → Keymap**.
@@ -57,12 +54,10 @@ Once a project is open, the main window is split into the following regions:
 | Action | Shortcut |
 |---|---|
 | Search everywhere (files, classes, actions, settings) | `Shift` `Shift` (double Shift) |
-| Go to file | `Ctrl+Shift+N` |
-| Go to declaration/definition | `Ctrl+B` or Ctrl+Click |
-| Find usages | `Alt+F7` |
-| Show recent files | `Ctrl+E` |
+| Go to declaration/definition | `Ctrl+B` or `Ctrl+Click` |
+| Comment/uncomment line | `Ctrl+/` |
 | Reformat code | `Ctrl+Alt+L` |
-| Optimize imports | `Ctrl+Alt+O` |
+| Find usages | `Alt+F7` |
 
 Getting comfortable with **Search Everywhere** (double `Shift`) is the single highest-leverage habit — it can open files, jump to a settings page, or run an IDE action without hunting through menus.
 
@@ -140,20 +135,6 @@ Settings that apply to the whole application, not just one module:
 * `oh-package.json5` (root) — workspace-level dependency declarations and the `oh_modules` resolution behavior.
 * `hvigorfile.ts` — the build script for **Hvigor**, OpenHarmony's build system (conceptually similar to a Gradle build script).
 
-### Resource Qualifiers
-
-Resource folders under `resources/` use qualifiers to target specific device configurations, for example:
-
-```text
-resources/
-├── base/            # fallback, always present
-├── en_US/            # locale
-├── dark/             # color mode
-└── phone/            # device type
-```
-
-DevEco Studio resolves the best-matching folder at build/runtime based on the current device's locale, color mode, screen density, and device type — you rarely need to write this logic yourself.
-
 ### Where the IDE Keeps Its Own State
 
 Two folders are IDE/tooling-generated and should **not** be committed to version control:
@@ -168,7 +149,7 @@ The [Version Control](#version-control) section below gives a ready-to-use `.git
 
 ## Editor Features
 
-DevEco Studio's editor is one of its strongest points: because it is built on the IntelliJ Platform, ArkTS/ArkUI code gets the same class of tooling that TypeScript and Java developers rely on daily.
+DevEco Studio's editor is one of its strongest points — because it is built on the IntelliJ Platform, ArkTS/ArkUI code gets the same class of tooling that TypeScript and Java developers rely on daily.
 
 ### Code Completion
 
@@ -176,20 +157,14 @@ As you type, DevEco Studio suggests:
 
 * Component names and their parameters (e.g. typing `Text(` shows the expected argument).
 * Available `@State`/`@Prop`/`@Link` decorators for ArkUI component properties.
-* Imports it can add automatically when you accept a suggestion from an unimported symbol.
+* Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
 !!! tip "Smart completion"
     `Ctrl+Shift+Space` narrows suggestions to what's actually valid at the cursor (e.g. only types assignable to the expected parameter), which is more useful than basic completion (`Ctrl+Space`) once a project grows.
 
 ### Navigating Code
 
-| Action | Shortcut | Notes |
-|---|---|---|
-| Go to declaration | `Ctrl+B` / Ctrl+Click | Jumps to where a symbol is defined |
-| Go to implementation | `Ctrl+Alt+B` | Useful for interfaces with multiple implementers |
-| Find usages | `Alt+F7` | Lists every call site in a dedicated tool window |
-| Show call hierarchy | `Ctrl+Alt+H` | Visualizes callers/callees of a function |
-| Structure view | `Alt+7` | Outline of the current file's declarations |
+Beyond `Ctrl+B` and `Alt+F7` from the Essential Navigation Shortcuts above, the **Structure view** (`Alt+7`) is worth knowing about — it shows an outline of the current file's declarations, handy for jumping around a large page.
 
 ### Refactoring
 
@@ -220,14 +195,7 @@ Live Templates are expandable code snippets. Type an abbreviation and press `Tab
 
 ### Formatting and Imports
 
-| Action | Shortcut |
-|---|---|
-| Reformat code | `Ctrl+Alt+L` |
-| Optimize imports (remove unused, sort) | `Ctrl+Alt+O` |
-| Reformat and optimize on save | Enable under **Settings → Tools → Actions on Save** |
-
-!!! tip "Team consistency"
-    If multiple people work on the same project, agree on formatter settings (**Settings → Editor → Code Style**) early — reformatting churn on every commit makes diffs much harder to review.
+Reformat with `Ctrl+Alt+L` (already listed above); enable **Reformat and optimize imports on save** under **Settings → Tools → Actions on Save** if you'd rather not think about it.
 
 ## Version Control
 
@@ -248,17 +216,6 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 !!! tip "Review before committing"
     Click through each changed file's diff in the Commit window before committing — it's the same discipline as `git diff` before `git add`, just inline with the editor.
 
-### Useful VCS Shortcuts
-
-| Action | Shortcut |
-|---|---|
-| Open Commit tool window | `Alt+9` |
-| Show local changes / diff | `Ctrl+D` (with a file selected) |
-| Update project (pull) | `Ctrl+T` |
-| Push | `Ctrl+Shift+K` |
-| Show history for a file | Right-click file → Git → Show History |
-| Annotate (blame) | Right-click gutter → Annotate with Git Blame |
-
 ### Branch Management
 
 The branch indicator in the bottom-right status bar opens a menu to checkout, create, rename, or merge branches without a terminal. It also shows incoming/outgoing commit counts once you've fetched.
@@ -268,7 +225,7 @@ The branch indicator in the bottom-right status bar opens a menu to checkout, cr
 
 ### Resolving Conflicts
 
-When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge tool: your version, the result, and the incoming version, with per-block **Accept Yours/Theirs** actions plus manual editing of the result pane. Resolve each conflicting file this way, then mark the merge/rebase as continued from the VCS menu.
+When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge tool: your version, the result, and the incoming version, with per-block **Accept Yours/Theirs** actions plus manual editing of the result pane. Resolve each conflicting file this way, then continue the merge/rebase from the VCS menu.
 
 ### Recommended `.gitignore`
 
