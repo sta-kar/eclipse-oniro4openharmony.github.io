@@ -127,7 +127,7 @@ Settings that apply to the whole application, not just one module:
 | `oh-package.json5` | Module's dependencies, similar in spirit to `package.json` |
 
 !!! note "Where `deviceTypes` matters"
-    If your app refuses to show up as a run target for a certain emulator (e.g. "phone" not listed), check `deviceTypes` in `module.json5` — this is the same issue documented in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
+    If your app refuses to show up as a run target for a certain emulator (e.g. "phone" not listed), check `deviceTypes` in `module.json5`.
 
 #### Project-Level Files
 
