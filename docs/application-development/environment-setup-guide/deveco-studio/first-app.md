@@ -18,6 +18,72 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 
 Once the project is open, `entry/src/main/ets/pages/Index.ets` is the default page rendered first. Open it to continue.
 
+## Version Control
+
+DevEco Studio includes the same built-in Git integration found across JetBrains IDEs, so you rarely need to leave the editor for everyday version control work.
+
+### Enabling VCS for a Project
+
+If a project wasn't cloned from Git, enable it via **VCS → Enable Version Control Integration** and choose Git. DevEco Studio then treats the project root as a Git repository and starts tracking file status.
+
+### The Commit Tool Window
+
+Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
+
+* Changed files, grouped by changelist (the default changelist is fine for most workflows).
+* A diff preview for the selected file.
+* A commit message box, plus **Commit** and **Commit and Push** buttons.
+
+!!! tip "Review before committing"
+    Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
+
+### Branch Management
+
+The branch indicator in the lower-right status bar opens a menu for checking out, creating, renaming, or merging branches without a terminal. After you fetch, it also shows incoming and outgoing commit counts.
+
+!!! note "Fetch vs. Update"
+    **Update Project** (`Ctrl+T`) fetches and merges or rebases according to your configured settings. To inspect remote changes without modifying the working tree, use **Git → Fetch** instead.
+
+### Resolving Conflicts
+
+When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge tool: your version, the result, and the incoming version, with per-block **Accept Yours/Theirs** actions plus manual editing of the result pane. Resolve each conflicting file this way, then continue the merge/rebase from the VCS menu.
+
+### Recommended `.gitignore`
+
+Several folders under a DevEco Studio project are either machine-local IDE state or fully regenerable build output, and should not be committed:
+
+```gitignore
+# Build output
+build/
+.hvigor/
+
+# Dependency cache (regenerated from oh-package.json5)
+oh_modules/
+
+# IDE metadata
+.idea/
+*.iml
+
+# Local, machine-specific config
+local.properties
+
+# Signing material — never commit real keystores or passwords
+*.p12
+*.jks
+*.cer
+*.p7b
+```
+
+!!! warning "Check history for secrets before pushing publicly"
+    If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
+
+### A Reasonable Day-to-Day Flow
+
+1. Pull/update before starting work (`Ctrl+T`).
+2. Make changes, using the Previewer and emulator/device to verify them (see [Emulator](emulator.md)).
+3. Review the diff in the Commit tool window, write a clear message, and commit.
+4. Push (`Ctrl+Shift+K`), or open a pull request from your Git hosting provider as your team's workflow dictates.
+
 ## Using the Previewer
 
 The **Previewer** renders ArkUI pages without an emulator or physical device, providing rapid feedback while you build the UI.
@@ -159,7 +225,7 @@ Needed for CI pipelines, team-shared release certificates, or when a specific pr
 4. Reference this signing config from the relevant product entry in `build-profile.json5`.
 
 !!! warning "Keep release keys out of the repository"
-    Never commit a keystore file or its passwords. Store them in a secrets manager or CI-only environment variables, and keep only a *reference* (path/alias) in version control — see [Version Control](workflow.md#version-control) for a `.gitignore` starting point.
+    Never commit a keystore file or its passwords. Store them in a secrets manager or CI-only environment variables, and keep only a *reference* (path/alias) in version control — see [Version Control](#version-control) for a `.gitignore` starting point.
 
 ### Generating a Package
 
