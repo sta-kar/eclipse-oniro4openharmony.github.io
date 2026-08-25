@@ -19,7 +19,7 @@ Open **Device Manager** from **Tools → Device Manager** or from the device men
 
 Device Manager's **Your Devices** page lists existing emulators under the **Local Emulator** tab, along with their locations on disk.
 
-<img src='../images/emulator_device_manager2.png' alt="Device Manager Your Devices page, Local Emulator tab, with the New Emulator button">
+<img src='../images/emulator_virtual_device_configuration.png' alt="Device Manager Your Devices page, Local Emulator tab, with the New Emulator button">
 
 ### Creating a Virtual Device
 
@@ -27,10 +27,10 @@ Device Manager's **Your Devices** page lists existing emulators under the **Loca
 2. On the **Select Virtual Device** screen, select a device type from the tree on the left (Phone, Foldable, WideFold, TripleFold, Tablet, 2in1, 2in1 Foldable, or TV) and a row that matches the target HarmonyOS and API version (see the version/API table in [Installation Process](installation/process.md)).
 3. If the system image has not yet been downloaded, click the download icon in the **Actions** column and wait for the download to finish. Allow approximately **2 GB** of free disk space for the image and approximately **12 GB** to run it.
 4. Click **Next**.
-<img src='../images/emulator_new_emulator.png' alt="Select Virtual Device screen listing device types, API versions, and a download action per row">
+<img src='../images/emulator_creating_new_device.png' alt="Select Virtual Device screen listing device types, API versions, and a download action per row">
 5. On the **Virtual Device Configure** screen, confirm the device name and hardware profile, including the screen size, resolution, and DPI. Click **Customize** to change the screen profile. Choose a boot option as described below, then set the RAM and ROM allocated to the virtual device.
 6. Click **Finish** to create it.
-<img src='../images/emulator_device_configuration.png' alt="Virtual Device Configure screen with name, screen profile, boot options, RAM and ROM fields">
+<img src='../images/emulator_virtual_device_configuration_2.png' alt="Virtual Device Configure screen with name, screen profile, boot options, RAM and ROM fields">
 
 !!! tip "compileSdkVersion vs. compatibleSdkVersion vs. targetSdkVersion"
     These fields live in each module's `build-profile.json5` and are easy to mix up:
@@ -52,5 +52,5 @@ If an emulator becomes unresponsive or enters an invalid state, such as the "Una
 
 1. In Device Manager, start the emulator (or let the IDE boot it automatically the first time you target it).
 2. Return to your project, open the run-target menu on the toolbar, and select the emulator under **Huawei|Emulator**. The menu also contains the **Huawei Simulator** entries (Wearable Simulator and Smart Vision Simulator) and the **Huawei Previewer**.
-<img src='../images/emulator_device_selection.png' alt="Run target dropdown with a created emulator selected under Huawei|Emulator">
+<img src='../images/emulator_device_run.png' alt="Run target dropdown with a created emulator selected under Huawei|Emulator">
 3. Click **Run**. The app builds, installs, and launches automatically on the emulator.
