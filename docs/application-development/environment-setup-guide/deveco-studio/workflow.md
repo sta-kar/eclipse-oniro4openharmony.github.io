@@ -10,13 +10,12 @@ DevEco Studio is built on the IntelliJ Platform, so if you have used Android Stu
 
 When no project is open, DevEco Studio shows the **Welcome** screen with:
 
-* **New Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
+* **Create Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
 * **Open** – open an existing project directory.
-* **Get from VCS** – clone a Git repository directly.
+* **Clone repository** – clone a Git repository directly.
 * A list of recently opened projects.
-* A gear icon for **Settings/Preferences**, **Plugins**, and **SDK Manager** — useful because these are reachable even before a project is open.
 
-<img src='images/deveco_starting_screen_2.png' alt="DevEco Studio Welcome screen with the Projects list, Create Project/Open/Clone Repository buttons, and the sidebar's Projects, Customize, Diagnose, and Learn sections">
+<img src="../images/deveco_starting_screen_2.png">
 
 ### Main Window Layout
 
