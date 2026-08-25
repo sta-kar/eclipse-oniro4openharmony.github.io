@@ -1,4 +1,6 @@
-# Core Workflow
+# Building & Running
+
+## Core Workflow
 
 The main development workflow consists of the following steps:
 
@@ -8,27 +10,51 @@ The main development workflow consists of the following steps:
 - Install your application.
 - Optionally, launch it remotely.
 
-# Oniro IDE
+=== "Oniro IDE"
 
-<div style="text-align:center">
-    <img src='../images/build.png'>
-</div> 
+    Use buttons provided by the extension:
 
-# Oniro App Builder
+    <div style="text-align:center">
+        <img src='../images/build.png'>
+    </div> 
 
-Use the following commands for the basic workflow:
+=== "Oniro App Builder"
 
-- `oniro-app sign`
-- `oniro-app build`
-- `oniro-app emulator connect`
-- `oniro-app app install`
-- `oniro-app app launch`
+    Use the following commands:
 
-# Additional App Builder Commands
+    - `oniro-app sign`
+    - `oniro-app build`
+    - `oniro-app emulator connect`
+    - `oniro-app app install`
+    - `oniro-app app launch`
+
+## HiLog
+
+HiLog is the log system OpenHarmony apps use.
+
+=== "Oniro IDE"
+
+    Open the `HiLog viewer` tab. You can filter the log by:
+    
+    - Process ID
+    - Severity
+    - Tag
+    - Message
+
+    > IMAGE HERE
+
+=== "Oniro App Builder"
+
+    `oniro-app watch` let's you collect HiLog lines.
+
+## Additional App Builder Commands
 
 Oniro App Builder provides other tools for debugging and working with AI agents:
 
-- `oniro-app screenshot` takes a screenshot.
-- `oniro-app dump` dumps the device state as JSON.
-- `oniro-app lint` runs the OpenHarmony code linter.
-- `oniro-app gesture` and `oniro-app input` simulate touch input.
+| Command | Description |
+| --- | --- |
+| `oniro-app screenshot` | Takes a screenshot. |
+| `oniro-app dump` | Dumps the device state as JSON. |
+| `oniro-app lint` | Runs the OpenHarmony code linter. |
+| `oniro-app gesture` | Simulates touch gesture. |
+| `oniro-app input` | Simulates touch input. |

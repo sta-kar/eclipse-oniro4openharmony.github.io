@@ -45,25 +45,31 @@ For the current command reference and USB troubleshooting, see the [official HDC
 1. Connect the watch and your computer to the same network.
 
 2. Find the watch's IP address, then click **Tools → IP Connection** in the navigation bar.
-!!! note
-    To find the watch's IP address, first enable **Developer options**. Go to **Settings → HUAWEI WATCH 5**, find **Software Version**, and tap it five times.
 
-   Enter the watch's IP address in the following field. After clicking the green **Start** button, the device appears at the top of DevEco Studio:
-   ![Device](images_wearable/image36.png){: .center}
-   ![Device](images_wearable/image39.png){: .center}
+    !!! note
+        To find the watch's IP address, first enable **Developer options**. Go to **Settings → HUAWEI WATCH 5**, find **Software Version**, and tap it five times.
+
+    Enter the watch's IP address in the following field. After clicking the green **Start** button, the device appears at the top of DevEco Studio:
+    
+    ![Device](images_wearable/image36.png){: .center}
+    ![Device](images_wearable/image39.png){: .center}
 
 3. Generate a signature:
-   - Click **Project Structure... → Project → Signing Configs** and select **Automatically generate signature**.
-   - Click **Apply** and wait for DevEco Studio to generate the signature.
-     ![Signature Settings](images_common/image28.png){: .center}
-   - The generated signing configuration appears under `app.signingConfigs` in the project-level `build-profile.json5`; its `material` fields contain the certificate, profile, and keystore paths.
-     ![Signature File](images_common/image35.png){: .center}
+    - Click **Project Structure... → Project → Signing Configs** and select **Automatically generate signature**.
+    - Click **Apply** and wait for DevEco Studio to generate the signature.
+      
+      ![Signature Settings](images_common/image28.png){: .center}
+    - The generated signing configuration appears under `app.signingConfigs` in the project-level `build-profile.json5`; its `material` fields contain the certificate, profile, and keystore paths.
+      
+      ![Signature File](images_common/image35.png){: .center}
 
 4. Click the **Run 'entry'** triangle button in the IDE.
-   ![Run App](images_wearable/image37.png){: .center}
+    
+    ![Run App](images_wearable/image37.png){: .center}
 
 5. The application now runs on the watch.
-   ![App Running](images_wearable/image38.png){: .center width="50%"}
+    
+    ![App Running](images_wearable/image38.png){: .center width="50%"}
 
 ---
 

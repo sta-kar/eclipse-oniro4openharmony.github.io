@@ -64,7 +64,7 @@ nav:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
             - Creating a Project: application-development/environment-setup-guide/oniro/create-project.md
             - Building & Running: application-development/environment-setup-guide/oniro/build-run.md
-
+            - Connecting a Real Device: application-development/environment-setup-guide/oniro/real-device.md
         - Full SDK & Public SDK: application-development/environment-setup-guide/full-public-sdk.md
 
       - Create Your First Eclipse Oniro Application:
