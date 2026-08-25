@@ -48,31 +48,39 @@ The branch indicator in the lower-right status bar opens a menu for checking out
 
 When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge tool: your version, the result, and the incoming version, with per-block **Accept Yours/Theirs** actions plus manual editing of the result pane. Resolve each conflicting file this way, then continue the merge/rebase from the VCS menu.
 
-### Recommended `.gitignore`
+### `.gitignore`
 
 Several folders under a DevEco Studio project are either machine-local IDE state or fully regenerable build output, and should not be committed:
 
-```gitignore
-# Build output
-build/
-.hvigor/
+=== "Actual"
+    <!-- TODO: replace with the .gitignore DevEco Studio actually generates for a new project -->
+    ```gitignore
+    .idea
+    local.properties
+    ```
 
-# Dependency cache (regenerated from oh-package.json5)
-oh_modules/
+=== "Recommended"
+    ```gitignore
+    # Build output
+    build/
+    .hvigor/
 
-# IDE metadata
-.idea/
-*.iml
+    # Dependency cache (regenerated from oh-package.json5)
+    oh_modules/
 
-# Local, machine-specific config
-local.properties
+    # IDE metadata
+    .idea/
+    *.iml
 
-# Signing material — never commit real keystores or passwords
-*.p12
-*.jks
-*.cer
-*.p7b
-```
+    # Local, machine-specific config
+    local.properties
+
+    # Signing material — never commit real keystores or passwords
+    *.p12
+    *.jks
+    *.cer
+    *.p7b
+    ```
 
 !!! warning "Check history for secrets before pushing publicly"
     If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
