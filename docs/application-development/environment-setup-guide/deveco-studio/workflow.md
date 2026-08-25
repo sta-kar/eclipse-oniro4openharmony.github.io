@@ -197,4 +197,11 @@ Live Templates are expandable code snippets. Type an abbreviation and press `Tab
 
 Reformat with `Ctrl+Alt+L` (already listed above); enable **Reformat and optimize imports on save** under **Settings → Tools → Actions on Save** if you'd rather not think about it.
 
+## A Reasonable Day-to-Day Flow
+
+1. Pull/update before starting work (`Ctrl+T`).
+2. Make changes, using the Previewer and emulator/device to verify them (see [First App](first-app.md) and [Emulator](emulator.md)).
+3. Review the diff in the Commit tool window, write a clear message, and commit.
+4. Push (`Ctrl+Shift+K`), or open a pull request from your Git hosting provider as your team's workflow dictates.
+
 With the layout, project files, and editor covered, move on to [First App](first-app.md) to actually build and run something.

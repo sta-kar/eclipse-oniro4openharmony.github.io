@@ -77,13 +77,6 @@ local.properties
 !!! warning "Check history for secrets before pushing publicly"
     If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
 
-### A Reasonable Day-to-Day Flow
-
-1. Pull/update before starting work (`Ctrl+T`).
-2. Make changes, using the Previewer and emulator/device to verify them (see [Emulator](emulator.md)).
-3. Review the diff in the Commit tool window, write a clear message, and commit.
-4. Push (`Ctrl+Shift+K`), or open a pull request from your Git hosting provider as your team's workflow dictates.
-
 ## Using the Previewer
 
 The **Previewer** renders ArkUI pages without an emulator or physical device, providing rapid feedback while you build the UI.
