@@ -40,22 +40,27 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 === "Windows"
     After the download completes, run the installer.
 
-    Click **Next** until you reach the **Choose Install Location** step.
-    If necessary, click **Browse...** to select the installation path. The installer shows the required and available space for the selected drive. Click **Next**.
-    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+    Click **Next** until you reach the **Choose Install Location** step. If necessary, click **Browse...** to select the installation path. The installer shows the required and available space for the selected drive.
 
     > **Note:** If this is not your first installation, delete all files from the previous installation directory before proceeding.
 
+    Click **Next**.
+
+    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+
     In the **Installation Options** step, keep **Create Desktop Shortcut** selected. Select **Add "bin" folder to the PATH** if you want to invoke DevEco Studio's bundled command-line tools from any terminal; this option requires a restart to take effect. Adding **Open Folder as Project** to the Explorer context menu is optional.
+
     <img src='../../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
 
     In the **Choose Start Menu Folder** step, keep the default settings and click `Install`.
+
     <img src='../../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
 
     DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
+
     <img src='../../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
 
     Wait for the copy to finish, then eject the mounted disk image.
@@ -114,10 +119,10 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
 
-Select `Do not import settings` (unless migrating from a previous install).
+If you have a previous DevEco Studio installation, you can import its settings here:
 <img src='../../images/image8.png'>
 
-!!! tip "Behind a proxy?"
+!!! tip "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
 
     === "Windows"
@@ -127,7 +132,7 @@ Select `Do not import settings` (unless migrating from a previous install).
         Reach Settings via **DevEco Studio → Settings** in the menu bar (or the `⌘,` shortcut).
 
 The environment configuration is now complete.
-<img src='../../images/image14.png'>
+<img src='../../images/deveco_starting_screen.png'>
 
 !!! note "Install Relevant APIs"
 

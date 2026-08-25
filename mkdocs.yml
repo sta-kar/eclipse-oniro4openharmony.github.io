@@ -53,13 +53,15 @@ nav:
       - Development Overview: application-development/index.md
       - Environment Setup Guide: 
         - Overview: application-development/environment-setup-guide/index.md
-        - DevEcoStudio:
+        - DevEco Studio:
           - Installation:
             - System Requirements: application-development/environment-setup-guide/deveco-studio/installation/system-requirements.md
             - Process of Installation: application-development/environment-setup-guide/deveco-studio/installation/process.md
           - Workflow: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
+          - Previewer vs. Emulator: application-development/environment-setup-guide/deveco-studio/previewer-vs-emulator.md
+          - Connecting a real device: application-development/environment-setup-guide/deveco-studio/real-device.md
         - Oniro IDE & App Builder:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
             - Creating a Project: application-development/environment-setup-guide/oniro/create-project.md
