@@ -4,11 +4,11 @@
 
 The main development workflow consists of the following steps:
 
-- Generate a signing configuration if you have not already done so.
-- Build your application.
-- Connect to the emulator if it is not already connected.
-- Install your application.
-- Optionally, launch it remotely.
+1. Generate a signing configuration if you have not already done so.
+2. Build your application.
+3. Connect to the emulator if it is not already connected.
+4. Install your application.
+5. Optionally, launch it remotely.
 
 === "Oniro IDE"
 
@@ -22,11 +22,11 @@ The main development workflow consists of the following steps:
 
     Use the following commands:
 
-    - `oniro-app sign`
-    - `oniro-app build`
-    - `oniro-app emulator connect`
-    - `oniro-app app install`
-    - `oniro-app app launch`
+    1. `oniro-app sign`
+    2. `oniro-app build`
+    3. `oniro-app emulator connect`
+    4. `oniro-app app install`
+    5. `oniro-app app launch`
 
 ## HiLog
 
