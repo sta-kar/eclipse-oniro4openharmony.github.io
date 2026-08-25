@@ -1,6 +1,8 @@
 # Connecting a Real Device
 
-Physical devices generally provide more representative performance and let you test hardware features that the emulator cannot reproduce, such as real sensors, cellular and Wi-Fi conditions, and battery behavior.
+Physical devices generally provide more representative performance and let you test hardware features that the emulator cannot reproduce, such as real sensors, cellular and Wi-Fi conditions, and battery behavior. Connect over USB when the device has a data-capable port, or over Wi-Fi when it does not (or when a cable is inconvenient).
+
+## Connecting via USB
 
 1. On the device, enable **Developer Options** (usually by tapping the build number several times in system settings) and turn on **USB Debugging**.
 2. Connect the device via USB.
