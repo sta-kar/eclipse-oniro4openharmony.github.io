@@ -21,6 +21,8 @@ When no project is open, DevEco Studio shows the **Welcome** screen with:
 
 Once a project is open, the main window is split into the following regions:
 
+<img src="../images/deveco_studio_main_panel.png">
+
 | Region | Location | Purpose |
 |---|---|---|
 | Navigation bar | Top | Breadcrumb of the current file's path, run/debug configuration selector, run/debug/stop buttons |
