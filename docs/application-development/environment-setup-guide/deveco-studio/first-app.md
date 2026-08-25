@@ -55,8 +55,12 @@ Several folders under a DevEco Studio project are either machine-local IDE state
 === "Actual"
     <!-- TODO: replace with the .gitignore DevEco Studio actually generates for a new project -->
     ```gitignore
-    .idea
-    local.properties
+    /node_modules
+    /oh_modules
+    /.preview
+    /build
+    /.cxx
+    /.test
     ```
 
 === "Recommended"
@@ -64,9 +68,15 @@ Several folders under a DevEco Studio project are either machine-local IDE state
     # Build output
     build/
     .hvigor/
+    .cxx/
+    .test/
 
-    # Dependency cache (regenerated from oh-package.json5)
+    # Previewer cache
+    .preview/
+
+    # Dependency cache (regenerated from oh-package.json5 / package.json)
     oh_modules/
+    node_modules/
 
     # IDE metadata
     .idea/
