@@ -144,7 +144,7 @@ Under **Settings → Languages & Frameworks → ArkUI Previewer** (path may vary
 
 ### When to Stop Trusting the Previewer
 
-The Previewer is a productivity tool, not a substitute for testing on a real target. Always validate on an emulator or device (see [Emulator](emulator.md)) before considering a feature done, especially anything touching permissions, sensors, background tasks, or performance.
+The Previewer is a productivity tool, not a substitute for testing on a real target. Always validate on an emulator or device (see [Emulator](emulator.md)) before considering a feature done, especially anything touching permissions, sensors, background tasks, or performance. See [Previewer vs. Emulator](previewer-vs-emulator.md) for a fuller comparison of what each one can and can't tell you.
 
 ## Running Your App
 
