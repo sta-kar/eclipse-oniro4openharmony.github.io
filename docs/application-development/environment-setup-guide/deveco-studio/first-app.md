@@ -36,6 +36,8 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 
 <img src='../images/deveco_version_control.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
 
+<img src='../images/deveco_version_control_2.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
+
 !!! tip "Review before committing"
     Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
 
