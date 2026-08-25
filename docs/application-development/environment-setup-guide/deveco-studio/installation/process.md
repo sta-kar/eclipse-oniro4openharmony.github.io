@@ -114,10 +114,10 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
 
-Select `Do not import settings` (unless migrating from a previous install).
+If you have a previous DevEco Studio installation, you can import its settings here:
 <img src='../../images/image8.png'>
 
-!!! tip "Behind a proxy?"
+!!! tip "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
 
     === "Windows"
