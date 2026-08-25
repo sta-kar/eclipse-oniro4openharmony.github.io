@@ -156,7 +156,7 @@ DevEco Studio's editor is one of its strongest points — because it is built on
 As you type, DevEco Studio suggests:
 
 * Component names and their parameters (e.g. typing `Text(` shows the expected argument).
-* Available `@State`/`@Prop`/`@Link` decorators for ArkUI component properties.
+* Available decorators for ArkUI component properties (for instance: `@State`/`@Prop`/`@Link`).
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
 !!! tip "Smart completion"
