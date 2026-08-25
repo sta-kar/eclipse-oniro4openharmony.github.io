@@ -13,10 +13,11 @@ To install Oniro App Builder, follow the instructions on [GitHub](https://github
 
 For full functionality, install the command-line tools and an SDK version compatible with your target device.
 
+!!! info
+    The emulator runs OpenHarmony 6.1 (API level 23).
+
 !!! warning
     On Windows or macOS, download only the SDK at this stage. The next section explains how to download the command-line tools for these systems.
-
-> The emulator runs OpenHarmony 6.1 (API level 23).
 
 === "Oniro IDE"
 

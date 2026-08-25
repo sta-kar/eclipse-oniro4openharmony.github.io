@@ -35,7 +35,7 @@ HiLog is the log system OpenHarmony apps use.
 === "Oniro IDE"
 
     Open the `HiLog viewer` tab. You can filter the log by:
-    
+
     - Process ID
     - Severity
     - Tag
@@ -45,7 +45,16 @@ HiLog is the log system OpenHarmony apps use.
 
 === "Oniro App Builder"
 
-    `oniro-app watch` let's you collect HiLog lines.
+    `oniro-app watch` let's you collect HiLog lines. The passable arguments are:
+
+    | Argument | Description |
+    | --- | --- |
+    | `--log <pattern>` | Only log lines matching the given regex are displayed. |
+    | `--for <ms>` | Duration to watch in milliseconds, defaults to 10000. |
+    | `--bundle <bundle>` | Filter to a specific bundle. |
+    | `--device <serial>` | Choose what device to listen to. |
+    | `--no-dedup` | Oniro-app autmatically hides consecutive dupliate line. Use this argument if you want to disable this behaviour.|
+    | `--json` | Emit the entries as JSON. |
 
 ## Additional App Builder Commands
 
