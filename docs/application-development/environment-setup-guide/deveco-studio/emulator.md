@@ -24,7 +24,7 @@ Device Manager's **Your Devices** page lists existing emulators under the **Loca
 ### Creating a Virtual Device
 
 1. Click **+ New Emulator**.
-2. On the **Select Virtual Device** screen, select a device type from the tree on the left (Phone, Foldable, WideFold, TripleFold, Tablet, 2in1, 2in1 Foldable, or TV) and a row that matches the target HarmonyOS and API version (see the version/API table in [Installation Process](installation/process.md)).
+2. On the **Select Virtual Device** screen, select a device type from the tree on the left (Phone, Foldable, WideFold, TripleFold, Tablet, 2in1, 2in1 Foldable, or TV) and a row that matches the target HarmonyOS and API version (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
 3. If the system image has not yet been downloaded, click the download icon in the **Actions** column and wait for the download to finish. Allow approximately **2 GB** of free disk space for the image and approximately **12 GB** to run it.
 4. Click **Next**.
 <img src='../images/emulator_creating_new_device.png' alt="Select Virtual Device screen listing device types, API versions, and a download action per row">

@@ -10,7 +10,7 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 4. Fill in the project details:
     * **Project name** and **Bundle name** (reverse-domain style, e.g. `com.example.myapplication`).
     * **Save location** on disk.
-    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in [Process of Installation](installation/process.md)).
+    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
 5. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
 
 !!! tip "Start from Empty Ability"
