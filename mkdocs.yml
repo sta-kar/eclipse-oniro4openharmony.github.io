@@ -158,13 +158,13 @@ nav:
           - Oniro Emulator: device-development/developer-boards/emulator.md
   - Contributing:
       - Overview: contributing/index.md
-      - Quick Start Guide for New Developers: contributing/quick-start-guide-for-new-developers.md
+      - Quick Start Guide for New Developer: contributing/quick-start-guide-for-new-developers.md
       - Eclipse Contributor Agreement: contributing/eclipse-contributor-agreement.md
-      - DCO Sign-Off: contributing/dco-signoff.md
+      - DCO-signoff: contributing/dco-signoff.md
       - GitHub Contributions: contributing/github-contributions.md
       - Bug Handling Process: contributing/bug-handling-process.md
       - REUSE Compliance: contributing/reuse-compliance.md
-      - Contributing to Projects Not Maintained by the Team: contributing/contributing-to-projects-not-maintained-by-team.md
+      - Contributing to Projects not Maintained by Team: contributing/contributing-to-projects-not-maintained-by-team.md
 extra_css:
   - stylesheets/extra.css
 

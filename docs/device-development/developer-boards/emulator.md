@@ -8,7 +8,7 @@ layout: default
 # Oniro Emulator
 
 The Oniro Emulator provides an easy and accessible way to develop and test applications or system components without the need for physical hardware.  
-It uses **QEMU**, an open-source machine emulator and virtualizer.
+It is based on **QEMU**, a powerful open-source machine emulator and virtualizer.  
 The emulator uses the **x86_64 architecture**, which, when run on an x86 host PC, enables faster emulation by leveraging **KVM** on Linux and **Hyper-V** on Windows for hardware-assisted virtualization.
 
 This guide provides step-by-step instructions to **build and run the Oniro Emulator**.
@@ -28,7 +28,7 @@ This guide provides step-by-step instructions to **build and run the Oniro Emula
 
 ## Fetch and Build
 
-Before proceeding, prepare the build environment and obtain the Oniro source code by following [Building Oniro](../building-oniro.md). Ensure that you use the `OpenHarmony-6.1-Release` branch. Then complete the following steps to configure the environment and build the emulator system image.
+Before proceeding, ensure your build environment is ready and the Oniro source code is available by following the [Quick Build Setup](../building-oniro.md) guide (make sure you are using the `OpenHarmony-6.1-Release` branch). Proceed with the following steps for additional environment setup and build the system image for the emulator.
 
 ### Apply source patches
 
@@ -62,7 +62,7 @@ After downloading, extract the archive and use the included run scripts as descr
 
 ## QEMU Installation
 
-The emulator requires **QEMU**.
+The emulator requires **QEMU** to be installed on your system.
 
 - Download and install QEMU from the official website:  
   [https://www.qemu.org/download/](https://www.qemu.org/download/)
@@ -131,4 +131,4 @@ This command connects your host to the emulator instance for debugging and file 
 
 ## Reference
 
-For more information, see the [Oniro Board Support Packages repository](https://github.com/eclipse-oniro4openharmony/device_board_oniro).
+For additional information please refer to the [Oniro Board Support Packages repository](https://github.com/eclipse-oniro4openharmony/device_board_oniro).

@@ -6,21 +6,24 @@ parent: Eclipse Oniro Project
 
 # OpenHarmony Mirror
 
-The Eclipse Oniro Project offers a complete GitHub-hosted
+The Eclipse Oniro project offers a complete GitHub-hosted
 [mirror](https://github.com/eclipse-oniro-mirrors/) of the OpenHarmony project,
 originally hosted at [GitCode](https://gitcode.com/openharmony).
-Changes are synchronized from GitCode to GitHub once a day.
+One-way synchronization of changes from GitCode to GitHub is performed once a day.
 
-The mirror provides faster and more reliable access for the Eclipse Oniro Project
-and its developers. We recommend using it to reduce synchronization interruptions
-and slow downloads outside China. It also streamlines forking and merging on GitHub.
+The reason for this mirror is the increased speed and reliability it offers
+to the Eclipse Oniro project and its developers. We encourage using it to avoid
+disconnects during sync and slow download speeds for developers working outside of China.
+In addition to speed and reliability it also allows for streamlining the process
+of forking and merging within GitHub and its large user base.
 
-To keep these mirrors current, a
+To ensure these mirrors are consistently up-to-date, a
 [synchronization CI workflow](https://github.com/eclipse-oniro-mirrors/mirror-sync)
-runs every 24 hours. It incorporates the latest GitCode changes and mirrors newly
-created repositories.
+is executed every 24 hours to incorporate the latest changes from GitCode into the
+existing repositories, as well as mirroring newly created repositories.
 
 For those involved in active development or wishing to contribute, please visit
-the [Eclipse Oniro for OpenHarmony](https://github.com/eclipse-oniro4openharmony)
-GitHub organization. The project develops its manifest fork and new additions there.
-The mirror is read-only; changes made on GitHub are not merged into it.
+the [Eclipse Oniro for OpenHarmony ](https://github.com/eclipse-oniro4openharmony)
+GitHub organization. This is where a fork of the manifest and newly created add-ons
+are being developed. The mirror itself is read-only and no changes from GitHub will
+be merged into it.
