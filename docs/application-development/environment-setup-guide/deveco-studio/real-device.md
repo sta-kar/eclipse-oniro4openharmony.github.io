@@ -9,6 +9,23 @@ Physical devices generally provide more representative performance and let you t
 
 If the device is not detected, follow the USB-connection troubleshooting steps in [Common Issues and Solutions](first-app.md#common-issues-and-solutions). USB power management often causes unstable connections on Windows.
 
+## Connecting via IP Address (Wi-Fi)
+
+Some devices — wearables in particular, which often have no USB data connection — must be connected over Wi-Fi instead. The computer running DevEco Studio and the device must be on the same Wi-Fi network.
+
+1. On the device, enable **Developer Options**, then turn on **HDC Debugging** and **Debugging via WLAN** (naming can vary slightly by device).
+2. Note the IP address and port shown once WLAN debugging is enabled, for example `192.168.1.42:5555`.
+3. In DevEco Studio, go to **Tools → IP Connection**, enter that IP address and port, and connect.
+4. Once the connection succeeds, the device shows as **online** and appears in the target device dropdown, the same as a USB-connected device.
+
+!!! tip "Command-line alternative"
+    You can make the same connection from the Terminal with `hdc`, without opening the IP Connection dialog:
+    ```bash
+    hdc tconn 192.168.1.42:5555
+    ```
+
+If the connection fails, confirm the computer can reach the device (`ping` its IP address) and that both are on the same network segment — a guest Wi-Fi network with client isolation enabled will block it.
+
 ## Using `hdc` from the Terminal
 
 **`hdc`** (HarmonyOS Device Connector) is the command-line counterpart to Device Manager and is bundled with the SDK. Use it to automate tasks or diagnose connection problems outside the IDE. Open the embedded **Terminal** tool window and try the following commands:
