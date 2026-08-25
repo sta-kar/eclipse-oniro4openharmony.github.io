@@ -98,26 +98,21 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 The environment configuration is now complete.
 <img src='../images/deveco_starting_screen.png'>
 
-!!! note "Install Relevant APIs"
+After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](workflow.md) to explore the IDE.
 
-    <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;" markdown>
-      <div style="flex:1 1 360px;font-size:0.9rem;line-height:1.9;" markdown>
+## Install Relevant APIs
 
-      To run applications for OpenHarmony, you also need to install the relevant APIs.
+To run applications for OpenHarmony, you also need to install the relevant APIs.
 
-      Open **DevEco Studio** and go to:
-      `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
+Open **DevEco Studio** and go to:
+  `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
 
-      You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
+You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
 
-      > 💡 With **DevEco Studio 6.1**, select **API Version 23** for development.
-      >
-      > Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
+With **DevEco Studio 6.1**, select **API Version 23** for development.
+ 
+Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
-      </div>
-
-    </div>
-
-    ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
+![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
 
 After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](workflow.md) to explore the IDE.
