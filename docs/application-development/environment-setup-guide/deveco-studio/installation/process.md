@@ -67,18 +67,13 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     On first launch, macOS Gatekeeper may block the app since it was downloaded from outside the App Store — if so, go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
-## Environment Configuration
-
-### DevEco Studio Initial Setup
+## DevEco Studio Initial Setup
 
 When you run DevEco Studio for the first time, the setup wizard will appear. This first-run wizard is the same on Windows and macOS — the screenshots below are from Windows, but macOS shows the same dialogs (just with macOS-style window chrome instead of the Windows title bar).
 <img src='../../images/deveco_welcome_screen.png'>
 
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
-
-If you have a previous DevEco Studio installation, you can import its settings here:
-<img src='../../images/image8.png'>
 
 !!! tip "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
