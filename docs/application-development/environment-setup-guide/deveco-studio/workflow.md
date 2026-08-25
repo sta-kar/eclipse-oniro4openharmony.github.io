@@ -16,6 +16,8 @@ When no project is open, DevEco Studio shows the **Welcome** screen with:
 * A list of recently opened projects.
 * A gear icon for **Settings/Preferences**, **Plugins**, and **SDK Manager** — useful because these are reachable even before a project is open.
 
+<img src='images/deveco_starting_screen_2.png' alt="DevEco Studio Welcome screen with the Projects list, Create Project/Open/Clone Repository buttons, and the sidebar's Projects, Customize, Diagnose, and Learn sections">
+
 ### Main Window Layout
 
 Once a project is open, the main window is split into the following regions:
