@@ -106,6 +106,10 @@ Open any page under `entry/src/main/ets/pages/` that contains an `@Entry @Compon
 1. Click inside the `.ets` file so it has focus.
 2. Look for the **Previewer** tab along the tool window bar, or use **View → Tool Windows → Previewer**.
 
+You can also select **Previewer** directly from the run-target dropdown on the toolbar, listed under **Huawei Previewer** alongside the emulator and simulator targets.
+
+<img src='../images/deveco_previewier.png' alt="Run target dropdown with Previewer selected under Huawei Previewer, alongside OpenHarmony Devices, HarmonyOS simulators, and Huawei|Emulator entries">
+
 !!! note "First render can be slow"
     The first preview of a session compiles the module, so it can take noticeably longer than subsequent updates. Later edits generally re-render in a second or two.
 
