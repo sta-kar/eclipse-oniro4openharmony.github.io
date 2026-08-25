@@ -1,6 +1,17 @@
-# Installation Process
+# Installation
 
 **DevEco Studio** is an integrated development environment (IDE) based on IntelliJ IDEA, tailored for building OpenHarmony applications. It provides integrated tools for coding, debugging, and managing dependencies, making it easier to develop, test, and deploy apps for the OpenHarmony and Oniro platforms.
+
+## System Requirements
+
+DevEco Studio is available for Windows and macOS. Your system should meet the following requirements:
+
+| Item             | Windows                  | macOS                                             |
+|------------------|---------------------------|----------------------------------------------------|
+| Operating System | Windows 10/11 64-bit      | macOS (x86) 11/12/13/14, or macOS (Arm) 12/13/14  |
+| Memory           | At least 16 GB            | At least 8 GB                                     |
+| Hard Disk        | At least 100 GB           | At least 100 GB                                   |
+| Resolution       | At least 1280 × 800 px    | At least 1280 × 800 px                             |
 
 ## Developer Account
 
@@ -27,7 +38,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 !!! info
     You need a Huawei account to download DevEco Studio.
 
-<img src='../../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
+<img src='../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
 
 === "Windows"
     Download the Windows installer (`.exe`, listed as "DevEco Studio for Windows").
@@ -46,22 +57,22 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     Click **Next**.
 
-    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+    <img src='../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
 
     In the **Installation Options** step, keep **Create Desktop Shortcut** selected. Select **Add "bin" folder to the PATH** if you want to invoke DevEco Studio's bundled command-line tools from any terminal; this option requires a restart to take effect. Adding **Open Folder as Project** to the Explorer context menu is optional.
 
-    <img src='../../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
+    <img src='../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
 
     In the **Choose Start Menu Folder** step, keep the default settings and click `Install`.
 
-    <img src='../../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
+    <img src='../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
 
     DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
 
-    <img src='../../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
+    <img src='../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
 
     Wait for the copy to finish, then eject the mounted disk image.
 
@@ -70,7 +81,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 ## DevEco Studio Initial Setup
 
 When you run DevEco Studio for the first time, the setup wizard will appear. This first-run wizard is the same on Windows and macOS — the screenshots below are from Windows, but macOS shows the same dialogs (just with macOS-style window chrome instead of the Windows title bar).
-<img src='../../images/deveco_welcome_screen.png'>
+<img src='../images/deveco_welcome_screen.png'>
 
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
@@ -85,7 +96,7 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
         Reach Settings via **DevEco Studio → Settings** in the menu bar (or the `⌘,` shortcut).
 
 The environment configuration is now complete.
-<img src='../../images/deveco_starting_screen.png'>
+<img src='../images/deveco_starting_screen.png'>
 
 !!! note "Install Relevant APIs"
 
@@ -101,12 +112,12 @@ The environment configuration is now complete.
 
       > 💡 With **DevEco Studio 6.1**, select **API Version 23** for development.
       >
-      > Refer to the [version mapping table](../../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
+      > Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
       </div>
 
     </div>
 
-    ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../../images/deveco_api_screen.png){: .center}
+    ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
 
-After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](../workflow.md) to explore the IDE.
+After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](workflow.md) to explore the IDE.
