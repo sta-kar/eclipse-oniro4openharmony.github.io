@@ -1,6 +1,6 @@
 # Workflow
 
-This page describes the IDE window layout, the files that DevEco Studio generates for a new project, editor tools that streamline daily development, and the built-in Git integration.
+This page describes the IDE window layout, the files that DevEco Studio generates for a new project, and editor tools that streamline daily development.
 
 ## Interface Tour
 
@@ -10,15 +10,18 @@ DevEco Studio is built on the IntelliJ Platform, so if you have used Android Stu
 
 When no project is open, DevEco Studio shows the **Welcome** screen with:
 
-* **New Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
+* **Create Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
 * **Open** – open an existing project directory.
-* **Get from VCS** – clone a Git repository directly.
+* **Clone repository** – clone a Git repository directly.
 * A list of recently opened projects.
-* A gear icon for **Settings/Preferences**, **Plugins**, and **SDK Manager** — useful because these are reachable even before a project is open.
+
+<img src="../images/deveco_starting_screen_2.png">
 
 ### Main Window Layout
 
 Once a project is open, the main window is split into the following regions:
+
+<img src="../images/deveco_studio_main_panel.png">
 
 | Region | Location | Purpose |
 |---|---|---|
@@ -145,7 +148,7 @@ The following IDE/tooling-generated paths should **not** be committed to version
 | `build/`, `.hvigor/` | Build outputs and Hvigor's cache |
 | `oh_modules/` | Resolved dependencies (equivalent to `node_modules`) |
 
-The [Version Control](#version-control) section below gives a ready-to-use `.gitignore` for these.
+The [Version Control](first-app.md#version-control) section in [First App](first-app.md) gives a ready-to-use `.gitignore` for these.
 
 ## Editor Features
 
@@ -156,7 +159,7 @@ DevEco Studio's editor is one of its strongest points — because it is built on
 As you type, DevEco Studio suggests:
 
 * Component names and their parameters (e.g. typing `Text(` shows the expected argument).
-* Available `@State`/`@Prop`/`@Link` decorators for ArkUI component properties.
+* Available decorators for ArkUI component properties (for instance: `@State`/`@Prop`/`@Link`).
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
 !!! tip "Smart completion"
@@ -197,70 +200,11 @@ Live Templates are expandable code snippets. Type an abbreviation and press `Tab
 
 Reformat with `Ctrl+Alt+L` (already listed above); enable **Reformat and optimize imports on save** under **Settings → Tools → Actions on Save** if you'd rather not think about it.
 
-## Version Control
-
-DevEco Studio includes the same built-in Git integration found across JetBrains IDEs, so you rarely need to leave the editor for everyday version control work.
-
-### Enabling VCS for a Project
-
-If a project wasn't cloned from Git, enable it via **VCS → Enable Version Control Integration** and choose Git. DevEco Studio then treats the project root as a Git repository and starts tracking file status.
-
-### The Commit Tool Window
-
-Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
-
-* Changed files, grouped by changelist (the default changelist is fine for most workflows).
-* A diff preview for the selected file.
-* A commit message box, plus **Commit** and **Commit and Push** buttons.
-
-!!! tip "Review before committing"
-    Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
-
-### Branch Management
-
-The branch indicator in the lower-right status bar opens a menu for checking out, creating, renaming, or merging branches without a terminal. After you fetch, it also shows incoming and outgoing commit counts.
-
-!!! note "Fetch vs. Update"
-    **Update Project** (`Ctrl+T`) fetches and merges or rebases according to your configured settings. To inspect remote changes without modifying the working tree, use **Git → Fetch** instead.
-
-### Resolving Conflicts
-
-When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge tool: your version, the result, and the incoming version, with per-block **Accept Yours/Theirs** actions plus manual editing of the result pane. Resolve each conflicting file this way, then continue the merge/rebase from the VCS menu.
-
-### Recommended `.gitignore`
-
-Several folders under a DevEco Studio project are either machine-local IDE state or fully regenerable build output, and should not be committed:
-
-```gitignore
-# Build output
-build/
-.hvigor/
-
-# Dependency cache (regenerated from oh-package.json5)
-oh_modules/
-
-# IDE metadata
-.idea/
-*.iml
-
-# Local, machine-specific config
-local.properties
-
-# Signing material — never commit real keystores or passwords
-*.p12
-*.jks
-*.cer
-*.p7b
-```
-
-!!! warning "Check history for secrets before pushing publicly"
-    If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
-
-### A Reasonable Day-to-Day Flow
+## A Reasonable Day-to-Day Flow
 
 1. Pull/update before starting work (`Ctrl+T`).
 2. Make changes, using the Previewer and emulator/device to verify them (see [First App](first-app.md) and [Emulator](emulator.md)).
 3. Review the diff in the Commit tool window, write a clear message, and commit.
 4. Push (`Ctrl+Shift+K`), or open a pull request from your Git hosting provider as your team's workflow dictates.
 
-With the layout, project files, editor, and VCS integration covered, move on to [First App](first-app.md) to actually build and run something.
+With the layout, project files, and editor covered, move on to [First App](first-app.md) to actually build and run something.
