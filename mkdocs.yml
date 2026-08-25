@@ -54,9 +54,7 @@ nav:
       - Environment Setup Guide: 
         - Overview: application-development/environment-setup-guide/index.md
         - DevEco Studio:
-          - Installation:
-            - System Requirements: application-development/environment-setup-guide/deveco-studio/installation/system-requirements.md
-            - Process of Installation: application-development/environment-setup-guide/deveco-studio/installation/process.md
+          - Installation: application-development/environment-setup-guide/deveco-studio/installation.md
           - Workflow: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
