@@ -40,22 +40,27 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 === "Windows"
     After the download completes, run the installer.
 
-    Click **Next** until you reach the **Choose Install Location** step.
-    If necessary, click **Browse...** to select the installation path. The installer shows the required and available space for the selected drive. Click **Next**.
-    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+    Click **Next** until you reach the **Choose Install Location** step. If necessary, click **Browse...** to select the installation path. The installer shows the required and available space for the selected drive.
 
     > **Note:** If this is not your first installation, delete all files from the previous installation directory before proceeding.
 
+    Click **Next**.
+
+    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+
     In the **Installation Options** step, keep **Create Desktop Shortcut** selected. Select **Add "bin" folder to the PATH** if you want to invoke DevEco Studio's bundled command-line tools from any terminal; this option requires a restart to take effect. Adding **Open Folder as Project** to the Explorer context menu is optional.
+
     <img src='../../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
 
     In the **Choose Start Menu Folder** step, keep the default settings and click `Install`.
+
     <img src='../../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
 
     DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
+
     <img src='../../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
 
     Wait for the copy to finish, then eject the mounted disk image.
