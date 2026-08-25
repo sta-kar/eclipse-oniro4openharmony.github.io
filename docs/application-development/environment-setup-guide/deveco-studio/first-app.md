@@ -52,7 +52,7 @@ When a merge/rebase produces a conflict, DevEco Studio opens a three-pane merge 
 
 Several folders under a DevEco Studio project are either machine-local IDE state or fully regenerable build output, and should not be committed:
 
-=== "Actual"
+=== "Default"
     <!-- TODO: replace with the .gitignore DevEco Studio actually generates for a new project -->
     ```gitignore
     /node_modules
