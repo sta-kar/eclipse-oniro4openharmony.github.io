@@ -22,6 +22,9 @@ DevEco Studio is available for Windows and macOS. Your system should meet the fo
     | Hard Disk        | At least 100 GB                                    |
     | Resolution       | At least 1280 × 800 px                             |
 
+    !!! warning "Emulator requires Apple Silicon"
+        DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
+
 ## Developer Account
 
 !!! note
@@ -117,7 +120,7 @@ Open **DevEco Studio** and go to:
 You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
 
 With **DevEco Studio 6.1**, select **API Version 23** for development.
- 
+
 Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
 ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}

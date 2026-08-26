@@ -18,7 +18,7 @@ Both let you see and interact with your app without physical hardware, but they 
 | Scope | One page's `build()` method at a time | The whole app, including navigation between pages and abilities |
 | Runs your `EntryAbility` lifecycle | No | Yes |
 | Native code / platform APIs | Not available (sandboxed renderer) | Fully available |
-| Network, filesystem, sensors | Not reliably reflected | Network and filesystem available with sensors: Pace taking, Light and Heart rate (on Wearables) |
+| Network, filesystem, sensors | Not reliably reflected | Network and filesystem available; sensors available, including pace tracking, light, and heart rate (on Wearables) |
 | Multi-device comparison | Several device profiles side by side, in one view | One virtual device per running emulator instance |
 | Disk/resource cost | Negligible | About 2 GB per downloaded system image, about 12 GB to run it |
 | Covered in | [Previewer](previewer.md) | This page |
