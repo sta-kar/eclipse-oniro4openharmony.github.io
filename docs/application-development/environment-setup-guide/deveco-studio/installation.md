@@ -47,7 +47,7 @@ Enterprise developers receive a broader range of services compared to individual
 
 The latest version of DevEco Studio can be downloaded from the [official download page](https://developer.huawei.com/consumer/en/download/).
 
-!!! info
+!!! note
     You need a Huawei account to download DevEco Studio.
 
 <img src='../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
@@ -98,7 +98,7 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
 
-!!! tip "Behind a proxy"
+!!! note "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
 
     === "Windows"

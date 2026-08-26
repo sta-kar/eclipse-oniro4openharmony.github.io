@@ -55,11 +55,11 @@ nav:
         - Overview: application-development/environment-setup-guide/index.md
         - DevEco Studio:
           - Installation: application-development/environment-setup-guide/deveco-studio/installation.md
-          - Work With IDE: application-development/environment-setup-guide/deveco-studio/workflow.md
+          - Work with IDE: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
           - Previewer: application-development/environment-setup-guide/deveco-studio/previewer.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
-          - Connecting a real device: application-development/environment-setup-guide/deveco-studio/real-device.md
+          - Connecting a Real Device: application-development/environment-setup-guide/deveco-studio/real-device.md
         - Oniro IDE & App Builder:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
             - Creating a Project: application-development/environment-setup-guide/oniro/create-project.md

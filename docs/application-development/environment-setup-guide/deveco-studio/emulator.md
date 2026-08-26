@@ -38,8 +38,11 @@ The Previewer's **Interactive Preview** mode lets you click, tap, and scroll ins
 
 ## Prerequisites
 
-* **Hardware virtualization** must be enabled — Intel VT-x / AMD-V on Windows (usually a BIOS/UEFI setting). Apple Silicon Macs run the emulator natively; Intel-based Macs do not support emulation in DevEco Studio.
+* **Hardware virtualization** must be enabled — Intel VT-x / AMD-V on Windows (usually a BIOS/UEFI setting). **Apple Silicon (ARM) Macs** run the emulator natively.
 * The first time you download a virtual device image, DevEco Studio shows an additional **User Agreement** dialog for the HarmonyOS Software License and Service Agreement that you need to accept.
+
+!!! warning "Emulator requires Apple Silicon"
+    DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
 
 <img src='../images/emulator_user_agreement.png' alt="User Agreement dialog with the HarmonyOS Software License and Service Agreement checkbox">
 
@@ -64,7 +67,7 @@ Device Manager's **Your Devices** page lists existing emulators under the **Loca
 6. Click **Finish** to create it.
 <img src='../images/emulator_virtual_device_configuration_2.png' alt="Virtual Device Configure screen with name, screen profile, boot options, RAM and ROM fields">
 
-!!! tip "compileSdkVersion vs. compatibleSdkVersion vs. targetSdkVersion"
+!!! note "compileSdkVersion vs. compatibleSdkVersion vs. targetSdkVersion"
     These fields live in each module's `build-profile.json5` and are easy to mix up:
 
     * **`compileSdkVersion`** — the API level used to *compile* the app. It controls which APIs are available at build time and has no direct bearing on which emulator or device can actually run the app.

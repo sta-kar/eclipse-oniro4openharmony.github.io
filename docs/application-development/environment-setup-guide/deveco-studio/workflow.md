@@ -31,7 +31,7 @@ Once a project is open, the main window is split into the following regions:
 | Tool window bar | Left/Right/Bottom edges | Icons to toggle tool windows such as Terminal, TODO, Problems |
 | Status bar | Bottom | Encoding, line separator, current SDK/API level, background task progress |
 
-!!! tip "Project view switcher"
+!!! note "Project view switcher"
     The dropdown at the top of the **Project** tool window (default label `Project`) lets you switch between several file tree presentations, including:
 
     * **Project** – the raw directory structure on disk.
@@ -79,7 +79,7 @@ As you type, DevEco Studio suggests:
 * Available decorators for ArkUI component properties (for instance: `@State`/`@Prop`/`@Link`).
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
-!!! tip "Smart completion"
+!!! note "Smart completion"
     `Ctrl+Shift+Space` narrows suggestions to those valid at the cursor, such as types assignable to the expected parameter. This is more useful than basic completion (`Ctrl+Space`) as a project grows.
 
 ### Navigating Code

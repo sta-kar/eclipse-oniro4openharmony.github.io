@@ -8,14 +8,14 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 2. Select a template. **Empty Ability** is the simplest starting point for a Stage-model application and is the best choice for a first project. Other templates add sample UI that is not needed at this stage.
 3. Fill in the project details:
     * **Project name** — a human-readable label used only within DevEco Studio.
-    * **Bundle name** — the app's globally unique identifier, written in reverse-domain style (e.g. `com.example.myapplication`). It's stored as `bundleName` in `AppScope/app.json5` (see [AppScope](../../create-your-first-app/project-structure.md#appscope)), is how the OS and app stores tell your app apart from every other installed app, and is difficult to change once you've published — pick it deliberately rather than accepting a placeholder.
+    * **Bundle name** — A reverse-domain-style identifier that follows the pattern `com.organisation_name.application_name`.
     * **Save location** — the directory on disk where the project is created.
     * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
     * **Module name** — name of the default module DevEco Studio creates (usually `entry`); becomes both the module's folder name and its `name` field in `module.json5` (see [entry Module](../../create-your-first-app/project-structure.md#entry-module)).
     * **Device type** — the device types your application should target: **Phone**, **Tablet**, **2in1**, **Car**, **Wearable**, and **TV**. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](../../create-your-first-app/project-structure.md)).
 4. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
 
-!!! tip "Start from Empty Ability"
+!!! note "Start from Empty Ability"
     Even if your application will need more structure, starting with **Empty Ability** and adding pages and modules yourself provides a clearer understanding of the project than removing content from a more comprehensive template.
 
 ### Targeting Oniro/OpenHarmony
@@ -63,7 +63,7 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 
 <img src='../images/deveco_version_control_2.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
 
-!!! tip "Review before committing"
+!!! note "Review before committing"
     Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
 
 ### Branch Management
@@ -164,7 +164,7 @@ Step controls:
 | Step out | `Shift+F8` |
 | Resume program | `F9` |
 
-!!! tip "Evaluate computed values"
+!!! note "Evaluate computed values"
     Instead of adding a temporary variable to inspect a computed value, pause at a breakpoint and use **Evaluate Expression** (`Alt+F8`). It can call methods and index into objects in the paused process, avoiding a source edit and restart.
 
 ### HiLog

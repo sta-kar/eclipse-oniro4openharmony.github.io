@@ -20,7 +20,7 @@ Some devices — wearables in particular, which often have no USB data connectio
 3. In DevEco Studio, go to **Tools → IP Connection**, enter that IP address and port, and connect.
 4. Once the connection succeeds, the device shows as **online** and appears in the target device dropdown, the same as a USB-connected device.
 
-!!! tip "Command-line alternative"
+!!! note "Command-line alternative"
     You can make the same connection from the Terminal with `hdc`, without opening the IP Connection dialog:
     ```bash
     hdc tconn 192.168.1.42:5555
