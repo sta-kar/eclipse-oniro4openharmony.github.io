@@ -52,11 +52,4 @@ hdc install ./entry-default-signed.hap
 !!! note "Multiple targets connected"
     If more than one device or emulator is connected, use `hdc -t <target-id> <command>`. Run `hdc list targets` first to get the identifier. The `-s` option selects an HDC server endpoint; it does not select a device serial number.
 
-## Troubleshooting
-
-* **Emulator does not start or displays a black screen** — confirm that virtualization is enabled in the BIOS or UEFI settings on Windows. Check whether other virtualization software, such as Hyper-V or VirtualBox, conflicts with it.
-* **Slow performance** — close unused emulators, allocate more RAM/CPU cores to the virtual device in its configuration, and prefer a lower-resolution device profile for quick UI checks.
-* **System image download stuck or failing** — verify your network/proxy configuration and that the selected image is available for your host platform and account region.
-* **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
-
-Next: run the app and diagnose problems in [First App](first-app.md#debugging-and-profiling).
+With DevEco Studio set up and a device connected, continue to [Create Your First App](../../create-your-first-app/index.md) to build and run your first Eclipse Oniro application.

@@ -1,6 +1,29 @@
-# Installation Process
+# Installation
 
 **DevEco Studio** is an integrated development environment (IDE) based on IntelliJ IDEA, tailored for building OpenHarmony applications. It provides integrated tools for coding, debugging, and managing dependencies, making it easier to develop, test, and deploy apps for the OpenHarmony and Oniro platforms.
+
+## System Requirements
+
+DevEco Studio is available for Windows and macOS. Your system should meet the following requirements:
+
+=== "Windows"
+    | Item             | Requirement            |
+    |------------------|-------------------------|
+    | Operating System | Windows 10/11 64-bit    |
+    | Memory           | At least 16 GB          |
+    | Hard Disk        | At least 100 GB         |
+    | Resolution       | At least 1280 × 800 px  |
+
+=== "macOS"
+    | Item             | Requirement                                       |
+    |------------------|----------------------------------------------------|
+    | Operating System | macOS (x86) 11/12/13/14, or macOS (Arm) 12/13/14   |
+    | Memory           | At least 8 GB                                      |
+    | Hard Disk        | At least 100 GB                                    |
+    | Resolution       | At least 1280 × 800 px                             |
+
+    !!! warning "Emulator requires Apple Silicon"
+        DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
 
 ## Developer Account
 
@@ -27,7 +50,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 !!! info
     You need a Huawei account to download DevEco Studio.
 
-<img src='../../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
+<img src='../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
 
 === "Windows"
     Download the Windows installer (`.exe`, listed as "DevEco Studio for Windows").
@@ -46,81 +69,34 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     Click **Next**.
 
-    <img src='../../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
+    <img src='../images/windows_setup1.png' alt="Choose Install Location step, showing space required and space available">
 
     In the **Installation Options** step, keep **Create Desktop Shortcut** selected. Select **Add "bin" folder to the PATH** if you want to invoke DevEco Studio's bundled command-line tools from any terminal; this option requires a restart to take effect. Adding **Open Folder as Project** to the Explorer context menu is optional.
 
-    <img src='../../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
+    <img src='../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
 
     In the **Choose Start Menu Folder** step, keep the default settings and click `Install`.
 
-    <img src='../../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
+    <img src='../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
 
     DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
 
-    <img src='../../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
+    <img src='../images/macos_installation.png' alt="DMG window: dragging DevEco-Studio into the Applications folder">
 
     Wait for the copy to finish, then eject the mounted disk image.
 
     On first launch, macOS Gatekeeper may block the app since it was downloaded from outside the App Store — if so, go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
-## Environment Configuration
-
-### OpenHarmony Version and API Level Reference
-
-Before setting up your development environment, review the relationship between OpenHarmony system versions and their corresponding API levels. This mapping helps you choose the correct API version for your target OpenHarmony system.
-
-<div style="width:100%;box-sizing:border-box; display:flex; justify-content:center;">
-  <div style="width:100%; max-width:720px; box-sizing:border-box;">
-    <table style="width:100%; table-layout:fixed; border-collapse:separate; border-spacing:0; border:1px solid #e6e6e6; border-radius:6px; overflow:hidden;">
-      <thead style="background:#fafafa;">
-        <tr>
-          <th style="text-align:left;padding:12px 14px;white-space:normal;font-weight:600;border-right:1px solid #f0f0f0;">Version</th>
-          <td style="text-align:center;padding:12px 10px;">4.0</td>
-          <td style="text-align:center;padding:12px 10px;">4.1</td>
-          <td style="text-align:center;padding:12px 10px;">5.0.0</td>
-          <td style="text-align:center;padding:12px 10px;">5.0.1</td>
-          <td style="text-align:center;padding:12px 10px;">5.0.2</td>
-          <td style="text-align:center;padding:12px 10px;">5.0.3</td>
-          <td style="text-align:center;padding:12px 10px;">5.1.0</td>
-          <td style="text-align:center;padding:12px 10px;">6.0</td>
-          <td style="text-align:center;padding:12px 10px;">6.1</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th style="text-align:left;padding:12px 14px;white-space:normal;background:#fff;font-weight:600;border-right:1px solid #f0f0f0;">API Level</th>
-          <td style="text-align:center;padding:12px 10px;">10</td>
-          <td style="text-align:center;padding:12px 10px;">11</td>
-          <td style="text-align:center;padding:12px 10px;">12</td>
-          <td style="text-align:center;padding:12px 10px;">13</td>
-          <td style="text-align:center;padding:12px 10px;">14</td>
-          <td style="text-align:center;padding:12px 10px;">15</td>
-          <td style="text-align:center;padding:12px 10px;">18</td>
-          <td style="text-align:center;padding:12px 10px;">20</td>
-          <td style="text-align:center;padding:12px 10px;">23</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-!!! tip "API Level Selection"
-    Select the API level that corresponds to the target OpenHarmony system version. For example, use API level 23 for OpenHarmony 6.1.
-
-### DevEco Studio Initial Setup
+## DevEco Studio Initial Setup
 
 When you run DevEco Studio for the first time, the setup wizard will appear. This first-run wizard is the same on Windows and macOS — the screenshots below are from Windows, but macOS shows the same dialogs (just with macOS-style window chrome instead of the Windows title bar).
-<img src='../../images/deveco_welcome_screen.png'>
+<img src='../images/deveco_welcome_screen.png'>
 
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
-
-If you have a previous DevEco Studio installation, you can import its settings here:
-<img src='../../images/image8.png'>
 
 !!! tip "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
@@ -132,28 +108,21 @@ If you have a previous DevEco Studio installation, you can import its settings h
         Reach Settings via **DevEco Studio → Settings** in the menu bar (or the `⌘,` shortcut).
 
 The environment configuration is now complete.
-<img src='../../images/deveco_starting_screen.png'>
+<img src='../images/deveco_starting_screen.png'>
 
-!!! note "Install Relevant APIs"
+## Install Relevant APIs
 
-    <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;" markdown>
-      <div style="flex:1 1 360px;font-size:0.9rem;line-height:1.9;" markdown>
+To run applications for OpenHarmony, you also need to install the relevant APIs.
 
-      To run applications for OpenHarmony, you also need to install the relevant APIs.
+Open **DevEco Studio** and go to:
+  `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
 
-      Open **DevEco Studio** and go to:
-      `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
+You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
 
-      You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
+With **DevEco Studio 6.1**, select **API Version 23** for development.
 
-      > 💡 With **DevEco Studio 6.1**, select **API Version 23** for development.
-      >
-      > Refer to the version mapping table above to choose the appropriate API level for your target OpenHarmony system.
+Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
-      </div>
+![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
 
-    </div>
-
-    ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../../images/deveco_api_screen.png){: .center}
-
-After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](../workflow.md) to explore the IDE.
+After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Work With IDE](workflow.md) to explore the IDE.

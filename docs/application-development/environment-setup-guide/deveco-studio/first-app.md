@@ -1,20 +1,45 @@
 # Quick start
 
-With DevEco Studio installed and its layout, project structure, and tooling covered in [Workflow](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
+With DevEco Studio installed and its layout, project structure, and tooling covered in [Work With IDE](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
 
 ## Creating Your First Project
 
 1. On the **Welcome** screen, click **New Project** (or, with a project already open, **File → New → New Project**).
 2. Select a template. **Empty Ability** is the simplest starting point for a Stage-model application and is the best choice for a first project. Other templates add sample UI that is not needed at this stage.
-3. Choose the device types that your application should target, such as Phone, Tablet, or Wearable. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](workflow.md#project-structure)).
-4. Fill in the project details:
-    * **Project name** and **Bundle name** (reverse-domain style, e.g. `com.example.myapplication`).
-    * **Save location** on disk.
-    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in [Process of Installation](installation/process.md)).
-5. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
+3. Fill in the project details:
+    * **Project name** — a human-readable label used only within DevEco Studio.
+    * **Bundle name** — the app's globally unique identifier, written in reverse-domain style (e.g. `com.example.myapplication`). It's stored as `bundleName` in `AppScope/app.json5` (see [AppScope](../../create-your-first-app/project-structure.md#appscope)), is how the OS and app stores tell your app apart from every other installed app, and is difficult to change once you've published — pick it deliberately rather than accepting a placeholder.
+    * **Save location** — the directory on disk where the project is created.
+    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
+    * **Module name** — name of the default module DevEco Studio creates (usually `entry`); becomes both the module's folder name and its `name` field in `module.json5` (see [entry Module](../../create-your-first-app/project-structure.md#entry-module)).
+    * **Device type** — the device types your application should target: **Phone**, **Tablet**, **2in1**, **Car**, **Wearable**, and **TV**. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](../../create-your-first-app/project-structure.md)).
+4. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
 
 !!! tip "Start from Empty Ability"
     Even if your application will need more structure, starting with **Empty Ability** and adding pages and modules yourself provides a clearer understanding of the project than removing content from a more comprehensive template.
+
+### Targeting Oniro/OpenHarmony
+
+Recent DevEco Studio versions create a HarmonyOS project by default. If your target is a HarmonyOS device, such as the HUAWEI WATCH 5, no further action is needed — use the SDK and runtime that already match that device. If your target is Oniro/OpenHarmony instead, retarget the generated project:
+
+1. Open the project-level `build-profile.json5` file (next to the `entry` directory).
+2. Ensure the selected product's entry uses the OpenHarmony SDK values. For OpenHarmony 6.1, for example:
+
+    ```json
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": 23,
+        "compatibleSdkVersion": 23,
+        "runtimeOS": "OpenHarmony"
+      }
+    ]
+    ```
+
+    Keep any other product options DevEco Studio generated.
+
+3. Click **Sync Now** after editing. If Sync Check offers to replace HarmonyOS-specific device types with OpenHarmony's `default` type, accept the change.
 
 Once the project is open, `entry/src/main/ets/pages/Index.ets` is the default page rendered first. Open it to continue.
 
@@ -99,64 +124,9 @@ Several folders under a DevEco Studio project are either machine-local IDE state
 !!! warning "Check history for secrets before pushing publicly"
     If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
 
-## Using the Previewer
-
-The **Previewer** renders ArkUI pages without an emulator or physical device, providing rapid feedback while you build the UI.
-
-### Opening the Previewer
-
-Open any page under `entry/src/main/ets/pages/` that contains an `@Entry @Component struct` declaration. The Previewer panel should appear automatically, usually docked to the right of the editor. If it does not:
-
-1. Click inside the `.ets` file so it has focus.
-2. Look for the **Previewer** tab along the tool window bar, or use **View → Tool Windows → Previewer**.
-
-You can also select **Previewer** directly from the run-target dropdown on the toolbar, listed under **Huawei Previewer** alongside the emulator and simulator targets.
-
-<img src='../images/deveco_previewier.png' alt="Run target dropdown with Previewer selected under Huawei Previewer, alongside OpenHarmony Devices, HarmonyOS simulators, and Huawei|Emulator entries">
-
-!!! note "First render can be slow"
-    The first preview of a session compiles the module, so it can take noticeably longer than subsequent updates. Later edits generally re-render in a second or two.
-
-### Live Updates
-
-With the Previewer open, most changes to the page's `build()` method are reflected as soon as you save (or immediately, if **Auto-save** is enabled). This works for:
-
-* Layout and styling changes (padding, colors, alignment).
-* Adding/removing components.
-* Changes to `@State` initial values.
-
-It does **not** reliably reflect:
-
-* Behavior driven by native code or platform APIs unavailable in the preview sandbox.
-* Runtime logic that depends on a real network call, file system, or sensor.
-* Some animations and gesture-driven interactions — verify those on an emulator or device.
-
-### Multi-Device Preview
-
-Click the device selector above the Previewer canvas to render the same page across several device profiles at once, such as phone, tablet, foldable, and wearable profiles. This helps you identify layout problems on smaller or larger screens before using an emulator.
-
-!!! tip
-    Keep at least one small-screen and one large-screen profile enabled for any page with a complex layout. Most responsive-layout problems appear immediately in this comparison view.
-
-### Interactive Preview
-
-By default, the Previewer is a static snapshot of the page's initial render. Switching to **Interactive Preview** mode (button above the canvas) lets you click, tap, and scroll inside the rendered page as if it were running on a device — useful for checking simple state changes (toggles, tab switches, list scrolling) without a full deploy.
-
-### Previewer Settings
-
-Under **Settings → Languages & Frameworks → ArkUI Previewer** (path may vary slightly by version) you can adjust:
-
-* Which device profiles are shown by default.
-* Whether the Previewer refreshes automatically or only on manual trigger.
-* Rendering scale, useful on high-DPI displays where the default preview looks too large or small.
-
-### When to Stop Trusting the Previewer
-
-The Previewer is a productivity tool, not a substitute for testing on a real target. Always validate on an emulator or device (see [Emulator](emulator.md)) before considering a feature done, especially anything touching permissions, sensors, background tasks, or performance. See [Previewer vs. Emulator](previewer-vs-emulator.md) for a fuller comparison of what each one can and can't tell you.
-
 ## Running Your App
 
-After verifying the page in the Previewer, select a run target from the menu in the navigation bar and click **Run**. If no emulator or device is listed, follow [Emulator](emulator.md) to create an emulator with Device Manager or connect physical hardware.
+After verifying the page in the [Previewer](previewer.md), select a run target from the menu in the navigation bar and click **Run**. If no emulator or device is listed, follow [Emulator](emulator.md) to create an emulator with Device Manager or connect physical hardware.
 
 ## Debugging and Profiling
 
@@ -220,7 +190,7 @@ By default, running or debugging from the IDE produces a **debug** build: automa
 
 A **release** build is suitable for distribution or publication. It is optimized and signed with a certificate that persists across builds so that updates are trusted as coming from the same source.
 
-Which variant gets built is controlled by the **Build Variant** selector, plus the products/targets declared in the project's `build-profile.json5` files (see [Project Structure](workflow.md#project-structure)).
+Which variant gets built is controlled by the **Build Variant** selector, plus the products/targets declared in the project's `build-profile.json5` files (see [Project Structure](../../create-your-first-app/project-structure.md)).
 
 ### Signing Configurations
 
@@ -255,4 +225,4 @@ Once a signing configuration is in place:
 
 Build output appears under the module's `build/` directory, and the **Build** tool window (`Alt+0`) shows progress and any failures.
 
-With your first app created, previewed, run, debugged, and packaged, head to [Emulator](emulator.md) if you haven't already set one up, or back to [Workflow](workflow.md) for a closer look at the IDE itself.
+With your first app created, run, debugged, and packaged, head to [Previewer](previewer.md) for a closer look at rendering your UI without an emulator, or back to [Work With IDE](workflow.md) for a closer look at the IDE itself.

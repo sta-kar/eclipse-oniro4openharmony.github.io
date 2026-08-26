@@ -54,13 +54,11 @@ nav:
       - Environment Setup Guide: 
         - Overview: application-development/environment-setup-guide/index.md
         - DevEco Studio:
-          - Installation:
-            - System Requirements: application-development/environment-setup-guide/deveco-studio/installation/system-requirements.md
-            - Process of Installation: application-development/environment-setup-guide/deveco-studio/installation/process.md
-          - Workflow: application-development/environment-setup-guide/deveco-studio/workflow.md
+          - Installation: application-development/environment-setup-guide/deveco-studio/installation.md
+          - Work With IDE: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
+          - Previewer: application-development/environment-setup-guide/deveco-studio/previewer.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
-          - Previewer vs. Emulator: application-development/environment-setup-guide/deveco-studio/previewer-vs-emulator.md
           - Connecting a real device: application-development/environment-setup-guide/deveco-studio/real-device.md
         - Oniro IDE & App Builder:
             - Setup: application-development/environment-setup-guide/oniro/setup.md
@@ -70,9 +68,7 @@ nav:
         - Full SDK & Public SDK: application-development/environment-setup-guide/full-public-sdk.md
       - Create Your First App:
         - Overview: application-development/create-your-first-app/index.md
-        - Create an Eclipse Oniro App Using an OpenHarmony Template: application-development/create-your-first-app/create-template.md
-        - Find Project Files: application-development/create-your-first-app/find-project-files.md
-        - Use the Previewer: application-development/create-your-first-app/use-previewer.md
+        - Project Structure: application-development/create-your-first-app/project-structure.md
         - Build the First Page: application-development/create-your-first-app/build-first-page.md
         - Build the Second Page: application-development/create-your-first-app/build-second-page.md
         - Implementing Page Redirection: application-development/create-your-first-app/page-redirect.md
