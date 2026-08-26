@@ -148,7 +148,7 @@ The following IDE/tooling-generated paths should **not** be committed to version
 | `build/`, `.hvigor/` | Build outputs and Hvigor's cache |
 | `oh_modules/` | Resolved dependencies (equivalent to `node_modules`) |
 
-The [Version Control](first-app.md#version-control) section in [First App](first-app.md) gives a ready-to-use `.gitignore` for these.
+The [Version Control](first-app.md#version-control) section in [Quick Start](first-app.md) gives a ready-to-use `.gitignore` for these.
 
 ## Editor Features
 
@@ -203,8 +203,8 @@ Reformat with `Ctrl+Alt+L` (already listed above); enable **Reformat and optimiz
 ## A Reasonable Day-to-Day Flow
 
 1. Pull/update before starting work (`Ctrl+T`).
-2. Make changes, using the Previewer and emulator/device to verify them (see [First App](first-app.md) and [Emulator](emulator.md)).
+2. Make changes, using the Previewer and emulator/device to verify them (see [Quick Start](first-app.md) and [Emulator](emulator.md)).
 3. Review the diff in the Commit tool window, write a clear message, and commit.
 4. Push (`Ctrl+Shift+K`), or open a pull request from your Git hosting provider as your team's workflow dictates.
 
-With the layout, project files, and editor covered, move on to [First App](first-app.md) to actually build and run something.
+With the layout, project files, and editor covered, move on to [Quick Start](first-app.md) to actually build and run something.

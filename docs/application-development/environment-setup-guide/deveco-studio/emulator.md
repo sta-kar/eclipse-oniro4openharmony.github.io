@@ -1,6 +1,6 @@
 # Emulator
 
-After verifying the UI in the Previewer (see [First App](first-app.md)), run the application on an emulator or physical hardware. The emulator works the same way on Windows and macOS. See [Previewer vs. Emulator](previewer-vs-emulator.md) if you're unsure which one you need at a given point.
+After verifying the UI in the Previewer (see [Quick start](first-app.md#using-the-previewer)), run the application on an emulator or physical hardware. The emulator works the same way on Windows and macOS. See [Previewer vs. Emulator](previewer-vs-emulator.md) if you're unsure which one you need at a given point.
 
 The virtual devices downloaded through DevEco Studio's Device Manager are HarmonyOS images. Use them for a HarmonyOS project with a matching API and release type. To run a project configured with `runtimeOS: "OpenHarmony"`, use the [Oniro emulator](../oniro/setup.md#downloading-the-emulator) or an OpenHarmony device instead.
 

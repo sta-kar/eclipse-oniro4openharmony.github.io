@@ -59,4 +59,4 @@ hdc install ./entry-default-signed.hap
 * **System image download stuck or failing** — verify your network/proxy configuration and that the selected image is available for your host platform and account region.
 * **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
 
-Next: run the app and diagnose problems in [First App](first-app.md#debugging-and-profiling).
+With DevEco Studio set up and a device connected, continue to [Create Your First App](../../create-your-first-app/index.md) to build and run your first Eclipse Oniro application.
