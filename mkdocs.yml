@@ -66,7 +66,6 @@ nav:
             - Building & Running: application-development/environment-setup-guide/oniro/build-run.md
             - Connecting a Real Device: application-development/environment-setup-guide/oniro/real-device.md
         - Full SDK & Public SDK: application-development/environment-setup-guide/full-public-sdk.md
-
       - Create Your First App:
         - Overview: application-development/create-your-first-app/index.md
         - Project Structure: application-development/create-your-first-app/project-structure.md
