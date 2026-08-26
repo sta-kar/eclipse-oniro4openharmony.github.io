@@ -6,12 +6,14 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 
 1. On the **Welcome** screen, click **New Project** (or, with a project already open, **File → New → New Project**).
 2. Select a template. **Empty Ability** is the simplest starting point for a Stage-model application and is the best choice for a first project. Other templates add sample UI that is not needed at this stage.
-3. Choose the device types that your application should target, such as Phone, Tablet, or Wearable. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](workflow.md#project-structure)).
-4. Fill in the project details:
-    * **Project name** and **Bundle name** (reverse-domain style, e.g. `com.example.myapplication`).
-    * **Save location** on disk.
+3. Fill in the project details:
+    * **Project name** — a human-readable label used only within DevEco Studio.
+    * **Bundle name** — the app's globally unique identifier, written in reverse-domain style (e.g. `com.example.myapplication`). It's stored as `bundleName` in `AppScope/app.json5` (see [AppScope](workflow.md#appscope)), is how the OS and app stores tell your app apart from every other installed app, and is difficult to change once you've published — pick it deliberately rather than accepting a placeholder.
+    * **Save location** — the directory on disk where the project is created.
     * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
-5. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
+    * **Module name** — name of the default module DevEco Studio creates (usually `entry`); becomes both the module's folder name and its `name` field in `module.json5` (see [entry Module](workflow.md#entry-module)).
+    * **Device type** — the device types your application should target: **Phone**, **Tablet**, **2in1**, **Car**, **Wearable**, and **TV**. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](workflow.md#project-structure)).
+4. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
 
 !!! tip "Start from Empty Ability"
     Even if your application will need more structure, starting with **Empty Ability** and adding pages and modules yourself provides a clearer understanding of the project than removing content from a more comprehensive template.
