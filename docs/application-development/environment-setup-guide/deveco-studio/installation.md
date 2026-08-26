@@ -107,8 +107,6 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 The environment configuration is now complete.
 <img src='../images/deveco_starting_screen.png'>
 
-After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](workflow.md) to explore the IDE.
-
 ## Install Relevant APIs
 
 To run applications for OpenHarmony, you also need to install the relevant APIs.
@@ -124,4 +122,4 @@ Refer to the [version mapping table](../../index.md#openharmony-version-and-api-
 
 ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
 
-After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Workflow](workflow.md) to explore the IDE.
+After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Work With IDE](workflow.md) to explore the IDE.
