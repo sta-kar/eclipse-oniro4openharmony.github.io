@@ -6,14 +6,14 @@ Install Oniro IDE from either the [Visual Studio Marketplace](https://marketplac
 
 To install Oniro App Builder, follow the instructions on [GitHub](https://github.com/eclipse-oniro4openharmony/oniro-app-builder).
 
-!!! info
+!!! note
     Make sure that you have JDK installed and that it's available on `PATH`, because it's needed for app signing.
 
 ## Downloading the SDK and Command-Line Tools
 
 For full functionality, install the command-line tools and an SDK version compatible with your target device.
 
-!!! info
+!!! note
     The emulator runs OpenHarmony 6.1 (API level 23).
 
 !!! warning
