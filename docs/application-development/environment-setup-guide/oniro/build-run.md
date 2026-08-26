@@ -41,7 +41,15 @@ HiLog is the log system OpenHarmony apps use.
     - Tag
     - Message
 
-    > IMAGE HERE
+    <div style="text-align:center">
+        <img src='../images/hilog_viewer.png'>
+    </div> 
+
+    When choosing process ID, the extension will show you running apps.
+
+    <div style="text-align:center">
+        <img src='../images/pid_picker.png'>
+    </div> 
 
 === "Oniro App Builder"
 
