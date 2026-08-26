@@ -124,64 +124,9 @@ Several folders under a DevEco Studio project are either machine-local IDE state
 !!! warning "Check history for secrets before pushing publicly"
     If a keystore or credentials file was committed before it was added to `.gitignore`, the ignore rule does not remove it from history. Purge it from history, for example with `git filter-repo`, and rotate the exposed credentials. Treat committed credentials as compromised.
 
-## Using the Previewer
-
-The **Previewer** renders ArkUI pages without an emulator or physical device, providing rapid feedback while you build the UI.
-
-### Opening the Previewer
-
-Open any page under `entry/src/main/ets/pages/` that contains an `@Entry @Component struct` declaration. The Previewer panel should appear automatically, usually docked to the right of the editor. If it does not:
-
-1. Click inside the `.ets` file so it has focus.
-2. Look for the **Previewer** tab along the tool window bar, or use **View → Tool Windows → Previewer**.
-
-You can also select **Previewer** directly from the run-target dropdown on the toolbar, listed under **Huawei Previewer** alongside the emulator and simulator targets.
-
-<img src='../images/deveco_previewier.png' alt="Run target dropdown with Previewer selected under Huawei Previewer, alongside OpenHarmony Devices, HarmonyOS simulators, and Huawei|Emulator entries">
-
-!!! note "First render can be slow"
-    The first preview of a session compiles the module, so it can take noticeably longer than subsequent updates. Later edits generally re-render in a second or two.
-
-### Live Updates
-
-With the Previewer open, most changes to the page's `build()` method are reflected as soon as you save (or immediately, if **Auto-save** is enabled). This works for:
-
-* Layout and styling changes (padding, colors, alignment).
-* Adding/removing components.
-* Changes to `@State` initial values.
-
-It does **not** reliably reflect:
-
-* Behavior driven by native code or platform APIs unavailable in the preview sandbox.
-* Runtime logic that depends on a real network call, file system, or sensor.
-* Some animations and gesture-driven interactions — verify those on an emulator or device.
-
-### Multi-Device Preview
-
-Click the device selector above the Previewer canvas to render the same page across several device profiles at once, such as phone, tablet, foldable, and wearable profiles. This helps you identify layout problems on smaller or larger screens before using an emulator.
-
-!!! tip
-    Keep at least one small-screen and one large-screen profile enabled for any page with a complex layout. Most responsive-layout problems appear immediately in this comparison view.
-
-### Interactive Preview
-
-By default, the Previewer is a static snapshot of the page's initial render. Switching to **Interactive Preview** mode (button above the canvas) lets you click, tap, and scroll inside the rendered page as if it were running on a device — useful for checking simple state changes (toggles, tab switches, list scrolling) without a full deploy.
-
-### Previewer Settings
-
-Under **Settings → Languages & Frameworks → ArkUI Previewer** (path may vary slightly by version) you can adjust:
-
-* Which device profiles are shown by default.
-* Whether the Previewer refreshes automatically or only on manual trigger.
-* Rendering scale, useful on high-DPI displays where the default preview looks too large or small.
-
-### When to Stop Trusting the Previewer
-
-The Previewer is a productivity tool, not a substitute for testing on a real target. Always validate on an emulator or device (see [Emulator](emulator.md)) before considering a feature done, especially anything touching permissions, sensors, background tasks, or performance. See [Previewer vs. Emulator](emulator.md#previewer-vs-emulator) for a fuller comparison of what each one can and can't tell you.
-
 ## Running Your App
 
-After verifying the page in the Previewer, select a run target from the menu in the navigation bar and click **Run**. If no emulator or device is listed, follow [Emulator](emulator.md) to create an emulator with Device Manager or connect physical hardware.
+After verifying the page in the [Previewer](previewer.md), select a run target from the menu in the navigation bar and click **Run**. If no emulator or device is listed, follow [Emulator](emulator.md) to create an emulator with Device Manager or connect physical hardware.
 
 ## Debugging and Profiling
 
@@ -280,4 +225,4 @@ Once a signing configuration is in place:
 
 Build output appears under the module's `build/` directory, and the **Build** tool window (`Alt+0`) shows progress and any failures.
 
-With your first app created, previewed, run, debugged, and packaged, head to [Emulator](emulator.md) if you haven't already set one up, or back to [Work With IDE](workflow.md) for a closer look at the IDE itself.
+With your first app created, run, debugged, and packaged, head to [Previewer](previewer.md) for a closer look at rendering your UI without an emulator, or back to [Work With IDE](workflow.md) for a closer look at the IDE itself.
