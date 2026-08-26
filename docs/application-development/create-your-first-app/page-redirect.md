@@ -111,3 +111,12 @@ Click **Back** on the page or the triangle icon in the Previewer to return to `I
     <img src='../images_mobile/image26.png'>
     <img src='../images_mobile/image27.png'>
 </div>
+
+### Run Your App
+
+Install and run your app on an emulator or a real device.
+  
+- [Running an app on the DevEco emulator](../../environment-setup-guide/deveco-studio/emulator/#running-your-app-on-the-emulator)
+- [Running an app on the Oniro emulator](../../environment-setup-guide/oniro/build-run/#core-workflow)
+- [Connecting a real device in DevEco Studio](../../environment-setup-guide/deveco-studio/real-device)
+- [Connecting a real device in Oniro App Builder or Oniro IDE](../../environment-setup-guide/oniro/real-device)
