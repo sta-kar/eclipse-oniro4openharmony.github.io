@@ -18,6 +18,29 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 !!! tip "Start from Empty Ability"
     Even if your application will need more structure, starting with **Empty Ability** and adding pages and modules yourself provides a clearer understanding of the project than removing content from a more comprehensive template.
 
+### Targeting Oniro/OpenHarmony
+
+Recent DevEco Studio versions create a HarmonyOS project by default. If your target is a HarmonyOS device, such as the HUAWEI WATCH 5, no further action is needed — use the SDK and runtime that already match that device. If your target is Oniro/OpenHarmony instead, retarget the generated project:
+
+1. Open the project-level `build-profile.json5` file (next to the `entry` directory).
+2. Ensure the selected product's entry uses the OpenHarmony SDK values. For OpenHarmony 6.1, for example:
+
+    ```json
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": 23,
+        "compatibleSdkVersion": 23,
+        "runtimeOS": "OpenHarmony"
+      }
+    ]
+    ```
+
+    Keep any other product options DevEco Studio generated.
+
+3. Click **Sync Now** after editing. If Sync Check offers to replace HarmonyOS-specific device types with OpenHarmony's `default` type, accept the change.
+
 Once the project is open, `entry/src/main/ets/pages/Index.ets` is the default page rendered first. Open it to continue.
 
 ## Version Control

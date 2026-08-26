@@ -58,7 +58,6 @@ nav:
           - Work With IDE: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Project View Additional Options: application-development/environment-setup-guide/deveco-studio/project-view-additional-options.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
-          - Targeting Oniro/OpenHarmony: application-development/environment-setup-guide/deveco-studio/oniro-openharmony-targeting.md
           - Previewer Additional Features: application-development/environment-setup-guide/deveco-studio/previewer-additional-features.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
           - Connecting a real device: application-development/environment-setup-guide/deveco-studio/real-device.md
