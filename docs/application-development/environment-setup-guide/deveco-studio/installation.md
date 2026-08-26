@@ -22,12 +22,12 @@ DevEco Studio is available for Windows and macOS. Your system should meet the fo
     | Hard Disk        | At least 100 GB                                    |
     | Resolution       | At least 1280 × 800 px                             |
 
-    !!! warning "Emulator requires Apple Silicon"
+    !!! warning "Warning"
         DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
 
 ## Developer Account
 
-!!! note
+!!! note "Note"
     For application development, developer verification is not required.
 
 Before downloading DevEco Studio, you need a Huawei account. For details on registration and identity verification, see:
@@ -47,7 +47,7 @@ Enterprise developers receive a broader range of services compared to individual
 
 The latest version of DevEco Studio can be downloaded from the [official download page](https://developer.huawei.com/consumer/en/download/).
 
-!!! note
+!!! note "Note"
     You need a Huawei account to download DevEco Studio.
 
 <img src='../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">

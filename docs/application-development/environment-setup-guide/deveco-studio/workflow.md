@@ -79,7 +79,7 @@ As you type, DevEco Studio suggests:
 * Available decorators for ArkUI component properties (for instance: `@State`/`@Prop`/`@Link`).
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
-!!! note "Smart completion"
+!!! note "Note"
     `Ctrl+Shift+Space` narrows suggestions to those valid at the cursor, such as types assignable to the expected parameter. This is more useful than basic completion (`Ctrl+Space`) as a project grows.
 
 ### Navigating Code
@@ -95,7 +95,7 @@ Refactoring tools rewrite code across the whole project consistently, not just i
 * **Extract Component** — turns a chunk of ArkUI declarative UI code into its own reusable `@Component`, which is one of the most useful refactors once a page's `build()` method starts growing.
 * **Safe Delete** — checks for remaining usages before deleting a declaration, refusing (or warning) if something still depends on it.
 
-!!! warning "Review before committing a rename"
+!!! warning "Warning"
     Renames across resource strings or files referenced by relative paths are not always fully tracked. After a large rename, run a project-wide search (`Ctrl+Shift+F`) for the old name before committing.
 
 ### Inspections and Quick Fixes

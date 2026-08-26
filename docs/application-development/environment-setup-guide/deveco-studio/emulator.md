@@ -33,7 +33,7 @@ Both let you see and interact with your app without physical hardware, but they 
 
 The Previewer's **Interactive Preview** mode lets you click, tap, and scroll inside the rendered page, which can feel similar to running the app. It only exercises the current page's own state, though — it does not launch your `EntryAbility`, and it cannot represent flows that span multiple pages or abilities.
 
-!!! warning "Don't skip real verification"
+!!! warning "Warning"
     As noted in [When to Stop Trusting the Previewer](previewer.md#when-to-stop-trusting-the-previewer), the Previewer is a productivity tool, not a substitute for testing on a real target. Always validate on an emulator or [physical device](real-device.md) before considering a feature done, especially anything touching permissions, sensors, background tasks, or performance.
 
 ## Prerequisites
@@ -41,7 +41,7 @@ The Previewer's **Interactive Preview** mode lets you click, tap, and scroll ins
 * **Hardware virtualization** must be enabled — Intel VT-x / AMD-V on Windows (usually a BIOS/UEFI setting). **Apple Silicon (ARM) Macs** run the emulator natively.
 * The first time you download a virtual device image, DevEco Studio shows an additional **User Agreement** dialog for the HarmonyOS Software License and Service Agreement that you need to accept.
 
-!!! warning "Emulator requires Apple Silicon"
+!!! warning "Warning"
     DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
 
 <img src='../images/emulator_user_agreement.png' alt="User Agreement dialog with the HarmonyOS Software License and Service Agreement checkbox">

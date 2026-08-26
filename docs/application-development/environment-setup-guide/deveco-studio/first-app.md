@@ -15,7 +15,7 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
     * **Device type** — the device types your application should target: **Phone**, **Tablet**, **2in1**, **Car**, **Wearable**, and **TV**. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](../../create-your-first-app/project-structure.md)).
 4. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
 
-!!! note "Start from Empty Ability"
+!!! note "Note"
     Even if your application will need more structure, starting with **Empty Ability** and adding pages and modules yourself provides a clearer understanding of the project than removing content from a more comprehensive template.
 
 ### Targeting Oniro/OpenHarmony
@@ -63,14 +63,14 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 
 <img src='../images/deveco_version_control_2.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
 
-!!! note "Review before committing"
+!!! note "Note"
     Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
 
 ### Branch Management
 
 The branch indicator in the lower-right status bar opens a menu for checking out, creating, renaming, or merging branches without a terminal. After you fetch, it also shows incoming and outgoing commit counts.
 
-!!! note "Fetch vs. Update"
+!!! note "Note"
     **Update Project** (`Ctrl+T`) fetches and merges or rebases according to your configured settings. To inspect remote changes without modifying the working tree, use **Git → Fetch** instead.
 
 ### Resolving Conflicts
@@ -164,7 +164,7 @@ Step controls:
 | Step out | `Shift+F8` |
 | Resume program | `F9` |
 
-!!! note "Evaluate computed values"
+!!! note "Note"
     Instead of adding a temporary variable to inspect a computed value, pause at a breakpoint and use **Evaluate Expression** (`Alt+F8`). It can call methods and index into objects in the paused process, avoiding a source edit and restart.
 
 ### HiLog
@@ -213,7 +213,7 @@ Needed for CI pipelines, team-shared release certificates, or when a specific pr
 3. In **Project Structure → Signing Configs**, point to the `.p12`/keystore file, the certificate, and the profile, and supply the store/key passwords.
 4. Reference this signing config from the relevant product entry in `build-profile.json5`.
 
-!!! warning "Keep release keys out of the repository"
+!!! warning "Warning"
     Never commit a keystore file or its passwords. Store them in a secrets manager or CI-only environment variables, and keep only a *reference* (path/alias) in version control — see [Version Control](#version-control) for a `.gitignore` starting point.
 
 ### Generating a Package
