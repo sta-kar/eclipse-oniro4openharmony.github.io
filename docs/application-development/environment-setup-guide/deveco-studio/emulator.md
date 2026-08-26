@@ -86,3 +86,10 @@ If an emulator becomes unresponsive or enters an invalid state, such as the "Una
 2. Return to your project, open the run-target menu on the toolbar, and select the emulator under **Huawei|Emulator**. The menu also contains the **Huawei Simulator** entries (Wearable Simulator and Smart Vision Simulator) and the **Huawei Previewer**.
 <img src='../images/emulator_device_run.png' alt="Run target dropdown with a created emulator selected under Huawei|Emulator">
 3. Click **Run**. The app builds, installs, and launches automatically on the emulator.
+
+## Troubleshooting
+
+* **Emulator does not start or displays a black screen** — confirm that virtualization is enabled in the BIOS or UEFI settings on Windows. Check whether other virtualization software, such as Hyper-V or VirtualBox, conflicts with it.
+* **Slow performance** — close unused emulators, allocate more RAM/CPU cores to the virtual device in its configuration, and prefer a lower-resolution device profile for quick UI checks.
+* **System image download stuck or failing** — verify your network/proxy configuration and that the selected image is available for your host platform and account region.
+* **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
