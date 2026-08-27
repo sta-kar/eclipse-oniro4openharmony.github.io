@@ -1,6 +1,6 @@
 # Quick start
 
-With DevEco Studio installed and its layout, project structure, and tooling covered in [Work With IDE](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
+With DevEco Studio installed and its layout, project structure, and tooling covered in [IDE Basics](workflow.md), this page walks through creating an actual project, seeing it render, running it, and diagnosing anything that goes wrong along the way.
 
 ## Creating Your First Project
 
@@ -96,4 +96,4 @@ Once a signing configuration is in place:
 
 Build output appears under the module's `build/` directory, and the **Build** tool window (`Alt+0`) shows progress and any failures.
 
-With your first app created, run, debugged, and packaged, head to [Previewer](previewer.md) for a closer look at rendering your UI without an emulator, or back to [Work With IDE](workflow.md) for a closer look at the IDE itself.
+With your first app created, run, debugged, and packaged, head to [Previewer](previewer.md) for a closer look at rendering your UI without an emulator, or back to [IDE Basics](workflow.md) for a closer look at the IDE itself.

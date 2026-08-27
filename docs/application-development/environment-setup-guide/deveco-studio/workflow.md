@@ -1,4 +1,4 @@
-# Work With IDE
+# IDE Basics
 
 This page describes the IDE window layout and editor tools that streamline daily development.
 
