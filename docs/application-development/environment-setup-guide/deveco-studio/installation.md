@@ -121,7 +121,7 @@ You don't strictly have to do this ahead of time — if a project needs an API v
 
 With **DevEco Studio 6.1**, select **API Version 23** for development.
 
-Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
+Refer to the [version mapping table](../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
 ![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](images/deveco_api_screen.png){: .center}
 

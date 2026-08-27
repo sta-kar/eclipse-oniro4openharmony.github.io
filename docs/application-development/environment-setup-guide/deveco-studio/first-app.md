@@ -10,7 +10,7 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
     * **Project name** — a human-readable label used only within DevEco Studio.
     * **Bundle name** — A reverse-domain-style identifier that follows the pattern `com.organisation_name.application_name`.
     * **Save location** — the directory on disk where the project is created.
-    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [application development overview](../../index.md#openharmony-version-and-api-level-reference)).
+    * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [Environment Setup Guide overview](../index.md#openharmony-version-and-api-level-reference)).
     * **Module name** — name of the default module DevEco Studio creates (usually `entry`); becomes both the module's folder name and its `name` field in `module.json5` (see [entry Module](../../create-your-first-app/project-structure.md#entry-module)).
     * **Device type** — the device types your application should target: **Phone**, **Tablet**, **2in1**, **Car**, **Wearable**, and **TV**. This sets the initial `deviceTypes` list in `module.json5`, which you can adjust later (see [Project Structure](../../create-your-first-app/project-structure.md)).
 4. Click **Finish**. DevEco Studio generates the project and opens it; the first indexing pass can take a minute or two on a new machine.
