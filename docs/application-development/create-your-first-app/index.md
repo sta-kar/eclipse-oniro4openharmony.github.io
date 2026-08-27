@@ -40,7 +40,7 @@ In this tutorial, you will create your first Eclipse Oniro application from DevE
 - **Implement Page Navigation**: Use the router module to enable redirection between pages with transition effects.
 <br>
 
-- **Deploy on a Real Device**: Configure HDC and run the application on a physical HiHope HH-SCDAYU200 Development Kit. The separate watch example targets HarmonyOS and must retain a HarmonyOS project configuration.
+- **Deploy on a Real Device**: Connect a physical device or wearable over USB or Wi-Fi and run the application on it.
 <br>
 
 #### What You Will Build
