@@ -83,4 +83,4 @@ The following IDE/tooling-generated paths should **not** be committed to version
 | `oh_modules/` | Resolved dependencies (equivalent to `node_modules`) |
 
 !!! tip
-    A ready-to-use `.gitignore` can be found in the [Version Control](../environment-setup-guide/deveco-studio/first-app.md#version-control) section.
+    A ready-to-use `.gitignore` can be found in the [Version Control](../environment-setup-guide/deveco-studio/version-control.md) section.
