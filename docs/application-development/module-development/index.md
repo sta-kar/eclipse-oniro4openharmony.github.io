@@ -2,7 +2,7 @@
 
 ### Before You Begin
 
-Make sure you have gone through the [Environment Setup Guide](../environment-setup-guide/index.md) and studied the [development tutorial](../create-first-eclipse-oniro-app/index.md).
+Make sure you have gone through the [Environment Setup Guide](../environment-setup-guide/index.md) and studied the [development tutorial](../create-your-first-app/index.md).
 
 ### Why Module Development?
 
