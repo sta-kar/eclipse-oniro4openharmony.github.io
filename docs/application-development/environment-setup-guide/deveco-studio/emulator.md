@@ -27,7 +27,7 @@ Both let you see and interact with your app without physical hardware, but they 
 
 **Use the Previewer** while iterating on layout and styling — adjusting padding, colors, component structure, or `@State` initial values. It gives feedback almost as fast as you can save the file, which makes it the right tool for the bulk of day-to-day UI work. See [Live Updates](previewer.md#live-updates) and [Multi-Device Preview](previewer.md#multi-device-preview).
 
-**Use the Emulator** once you need to verify something the Previewer cannot simulate: navigation between pages, ability lifecycle callbacks, permission prompts, background tasks, real network/file/sensor access, or animations and gestures. It is also the only option for debugging or profiling, since only a running app process can be attached to — see [Debugging and Profiling](first-app.md#debugging-and-profiling).
+**Use the Emulator** once you need to verify something the Previewer cannot simulate: navigation between pages, ability lifecycle callbacks, permission prompts, background tasks, real network/file/sensor access, or animations and gestures. It is also the only option for debugging or profiling, since only a running app process can be attached to — see [Debugging](debugging.md).
 
 ### Interactive Preview Is Not an Emulator Substitute
 

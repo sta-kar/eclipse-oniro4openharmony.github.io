@@ -57,6 +57,7 @@ nav:
           - Installation: application-development/environment-setup-guide/deveco-studio/installation.md
           - Work with IDE: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
+          - Debugging: application-development/environment-setup-guide/deveco-studio/debugging.md
           - Previewer: application-development/environment-setup-guide/deveco-studio/previewer.md
           - Emulator: application-development/environment-setup-guide/deveco-studio/emulator.md
           - Connecting a Real Device: application-development/environment-setup-guide/deveco-studio/real-device.md
