@@ -63,8 +63,8 @@ Settings that apply to the whole application, not just one module:
 | `build-profile.json5` | Module-level build configuration, including build options and module targets |
 | `oh-package.json5` | Module's dependencies, similar in spirit to `package.json` |
 
-!!! note "Where `deviceTypes` matters"
-    If your app refuses to show up as a run target for a certain emulator, check `deviceTypes` in `module.json5`. HarmonyOS phone projects use `phone`; OpenHarmony projects use `default` (and can also list supported form factors such as `tablet`). This is the same issue documented in [Common Issues and Solutions](../environment-setup-guide/deveco-studio/first-app.md#common-issues-and-solutions).
+!!! note "Note"
+    If your app refuses to show up as a run target for a certain emulator, check `deviceTypes` in `module.json5`. HarmonyOS phone projects use `phone`; OpenHarmony projects use `default` (and can also list supported form factors such as `tablet`).
 
 ### Project-Level Files
 
