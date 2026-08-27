@@ -13,7 +13,7 @@ You can also select **Previewer** directly from the run-target dropdown on the t
 
 <img src='../images/deveco_previewier.png' alt="Run target dropdown with Previewer selected under Huawei Previewer, alongside OpenHarmony Devices, HarmonyOS simulators, and Huawei|Emulator entries">
 
-!!! note "First render can be slow"
+!!! note "Note"
     The first preview of a session compiles the module, so it can take noticeably longer than subsequent updates. Later edits generally re-render in a second or two.
 
 ## Screen Rotation
@@ -42,7 +42,7 @@ Switch between individual device profiles to see how the application appears on 
 
 Click the device selector above the Previewer canvas to render the same page across several device profiles at once, such as phone, tablet, foldable, and wearable profiles. This helps you identify layout problems on smaller or larger screens before using an emulator.
 
-!!! tip
+!!! note "Note"
     Keep at least one small-screen and one large-screen profile enabled for any page with a complex layout. Most responsive-layout problems appear immediately in this comparison view.
 
 ## Interactive Preview

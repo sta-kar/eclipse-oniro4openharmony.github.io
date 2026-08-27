@@ -1,4 +1,4 @@
-# Work With IDE
+# IDE Basics
 
 This page describes the IDE window layout and editor tools that streamline daily development.
 
@@ -21,17 +21,32 @@ When no project is open, DevEco Studio shows the **Welcome** screen with:
 
 Once a project is open, the main window is split into the following regions:
 
-<img src="../images/deveco_studio_main_panel.png">
+=== "Navigation bar"
+    <img src="../images/deveco_studio_main_panel_1.png">
 
-| Region | Location | Purpose |
-|---|---|---|
-| Navigation bar | Top | Breadcrumb of the current file's path, run/debug configuration selector, run/debug/stop buttons |
-| Project tool window | Left | File tree of the project (several views available, see below) |
-| Editor | Center | Source files, resource files, previews |
-| Tool window bar | Left/Right/Bottom edges | Icons to toggle tool windows such as Terminal, TODO, Problems |
-| Status bar | Bottom | Encoding, line separator, current SDK/API level, background task progress |
+    Breadcrumb of the current file's path, run/debug configuration selector, run/debug/stop buttons.
 
-!!! tip "Project view switcher"
+=== "Project tool window"
+    <img src="../images/deveco_studio_main_panel_2.png">
+
+    File tree of the project (several views available, see below).
+
+=== "Editor"
+    <img src="../images/deveco_studio_main_panel_3.png">
+
+    Source files, resource files, previews.
+
+=== "Tool window bar"
+    <img src="../images/deveco_studio_main_panel_4.png">
+
+    Icons to toggle tool windows such as Terminal, TODO, Problems.
+
+=== "Status bar"
+    <img src="../images/deveco_studio_main_panel_5.png">
+
+    Encoding, line separator, current SDK/API level, background task progress.
+
+!!! note "Project view switcher"
     The dropdown at the top of the **Project** tool window (default label `Project`) lets you switch between several file tree presentations, including:
 
     * **Project** – the raw directory structure on disk.
@@ -79,7 +94,7 @@ As you type, DevEco Studio suggests:
 * Available decorators for ArkUI component properties (for instance: `@State`/`@Prop`/`@Link`).
 * Automatic import insertion when you accept a suggestion for a symbol that isn't imported yet.
 
-!!! tip "Smart completion"
+!!! note "Note"
     `Ctrl+Shift+Space` narrows suggestions to those valid at the cursor, such as types assignable to the expected parameter. This is more useful than basic completion (`Ctrl+Space`) as a project grows.
 
 ### Navigating Code
@@ -95,7 +110,7 @@ Refactoring tools rewrite code across the whole project consistently, not just i
 * **Extract Component** — turns a chunk of ArkUI declarative UI code into its own reusable `@Component`, which is one of the most useful refactors once a page's `build()` method starts growing.
 * **Safe Delete** — checks for remaining usages before deleting a declaration, refusing (or warning) if something still depends on it.
 
-!!! warning "Review before committing a rename"
+!!! warning "Warning"
     Renames across resource strings or files referenced by relative paths are not always fully tracked. After a large rename, run a project-wide search (`Ctrl+Shift+F`) for the old name before committing.
 
 ### Inspections and Quick Fixes

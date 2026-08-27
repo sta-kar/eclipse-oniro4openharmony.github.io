@@ -22,12 +22,12 @@ DevEco Studio is available for Windows and macOS. Your system should meet the fo
     | Hard Disk        | At least 100 GB                                    |
     | Resolution       | At least 1280 × 800 px                             |
 
-    !!! warning "Emulator requires Apple Silicon"
+    !!! warning "Warning"
         DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](real-device.md) instead.
 
 ## Developer Account
 
-!!! note
+!!! note "Note"
     For application development, developer verification is not required.
 
 Before downloading DevEco Studio, you need a Huawei account. For details on registration and identity verification, see:
@@ -47,7 +47,7 @@ Enterprise developers receive a broader range of services compared to individual
 
 The latest version of DevEco Studio can be downloaded from the [official download page](https://developer.huawei.com/consumer/en/download/).
 
-!!! info
+!!! note "Note"
     You need a Huawei account to download DevEco Studio.
 
 <img src='../images/windows_download.png' alt="DevEco Studio download page listing the Windows, Mac (X86), and Mac (ARM) installers">
@@ -98,7 +98,7 @@ When you run DevEco Studio for the first time, the setup wizard will appear. Thi
 !!! note "macOS Gatekeeper / User Agreement"
     On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
 
-!!! tip "Behind a proxy"
+!!! note "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
 
     === "Windows"
@@ -121,8 +121,8 @@ You don't strictly have to do this ahead of time — if a project needs an API v
 
 With **DevEco Studio 6.1**, select **API Version 23** for development.
 
-Refer to the [version mapping table](../../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
+Refer to the [version mapping table](../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
-![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](../images/deveco_api_screen.png){: .center}
+![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](images/deveco_api_screen.png){: .center}
 
-After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [Work With IDE](workflow.md) to explore the IDE.
+After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [IDE Basics](workflow.md) to explore the IDE.
