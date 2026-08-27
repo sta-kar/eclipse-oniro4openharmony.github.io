@@ -57,6 +57,7 @@ nav:
           - Installation: application-development/environment-setup-guide/deveco-studio/installation.md
           - IDE Basics: application-development/environment-setup-guide/deveco-studio/workflow.md
           - Quick start: application-development/environment-setup-guide/deveco-studio/first-app.md
+          - Build Variants and Signing: application-development/environment-setup-guide/deveco-studio/build-variants-and-signing.md
           - Version Control: application-development/environment-setup-guide/deveco-studio/version-control.md
           - Debugging: application-development/environment-setup-guide/deveco-studio/debugging.md
           - Previewer: application-development/environment-setup-guide/deveco-studio/previewer.md
