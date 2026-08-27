@@ -15,14 +15,14 @@ By following this documentation, you'll learn how to:
 - Gradually master essential concepts to advance your development journey.
 
 ## Development Environment
-To start developing Oniro applications, you first need to set up the development environment by installing `DevEco Studio`.
+To start developing Oniro applications, you first need to set up the development environment by installing `DevEco Studio`, `Oniro App Builder` or `Oniro IDE VS Code extension`.
 
 For detailed instructions, see the [Environment Setup Guide](environment-setup-guide/index.md).
 
 ## Learning Path
 To support your application development, we provide comprehensive development guidelines.
 
-You can familiarize yourself with the application development process by [getting started with a simple project](create-first-eclipse-oniro-app/index.md).
+You can familiarize yourself with the application development process by [getting started with a simple project](create-your-first-app/index.md).
 
 ## OpenHarmony Version and API Level Reference
 
