@@ -75,7 +75,6 @@ nav:
         - Build the First Page: application-development/create-your-first-app/build-first-page.md
         - Build the Second Page: application-development/create-your-first-app/build-second-page.md
         - Implementing Page Redirection: application-development/create-your-first-app/page-redirect.md
-        - Running the Application on a Real Device: application-development/create-your-first-app/run-real-device.md
       - Basic Concepts: 
         - Overview: application-development/basic-concepts/index.md
         - Application Package Structure in Stage Model: application-development/basic-concepts/app-pack-structure.md
