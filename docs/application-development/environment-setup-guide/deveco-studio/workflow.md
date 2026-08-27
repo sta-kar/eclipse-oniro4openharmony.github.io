@@ -21,15 +21,30 @@ When no project is open, DevEco Studio shows the **Welcome** screen with:
 
 Once a project is open, the main window is split into the following regions:
 
-<img src="../images/deveco_studio_main_panel.png">
+=== "Navigation bar"
+    <img src="../images/deveco_studio_main_panel_1.png">
 
-| Region | Location | Purpose |
-|---|---|---|
-| Navigation bar | Top | Breadcrumb of the current file's path, run/debug configuration selector, run/debug/stop buttons |
-| Project tool window | Left | File tree of the project (several views available, see below) |
-| Editor | Center | Source files, resource files, previews |
-| Tool window bar | Left/Right/Bottom edges | Icons to toggle tool windows such as Terminal, TODO, Problems |
-| Status bar | Bottom | Encoding, line separator, current SDK/API level, background task progress |
+    Breadcrumb of the current file's path, run/debug configuration selector, run/debug/stop buttons.
+
+=== "Project tool window"
+    <img src="../images/deveco_studio_main_panel_2.png">
+
+    File tree of the project (several views available, see below).
+
+=== "Editor"
+    <img src="../images/deveco_studio_main_panel_3.png">
+
+    Source files, resource files, previews.
+
+=== "Tool window bar"
+    <img src="../images/deveco_studio_main_panel_4.png">
+
+    Icons to toggle tool windows such as Terminal, TODO, Problems.
+
+=== "Status bar"
+    <img src="../images/deveco_studio_main_panel_5.png">
+
+    Encoding, line separator, current SDK/API level, background task progress.
 
 !!! note "Project view switcher"
     The dropdown at the top of the **Project** tool window (default label `Project`) lets you switch between several file tree presentations, including:
