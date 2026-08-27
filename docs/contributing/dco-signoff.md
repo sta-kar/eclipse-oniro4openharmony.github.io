@@ -1,6 +1,6 @@
 Commits **MUST** be submitted only with a sign-off by the submitter. A
 commit without a sign-off will be automatically rejected. You don't
-need be the author or the copyright holder of the contribution, but you
+need to be the author or the copyright holder of the contribution, but you
 must make sure that you have the power to submit on behalf of those who
 are.
 

@@ -1,6 +1,6 @@
 
 GitHub handles contributions as [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to relevant repositories part of the [Eclipse Oniro for OpenHarmony organization](https://github.com/eclipse-oniro4openharmony).
-The flow for handling that is classic: fork-based pull requests. This means that once you have an account, you can fork any repository, create a branch with proposed changes and raise a pull request against the forked repository. More generic information you can find on the GitHub's documentation as part of ["Working with forks"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks).
+The flow for handling that is classic: fork-based pull requests. This means that once you have an account, you can fork any repository, create a branch with proposed changes and raise a pull request against the original repository. More generic information you can find on the GitHub's documentation as part of ["Working with forks"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks).
 
 ## Git setup
 
@@ -45,7 +45,7 @@ To achieve this, we maintain the following commit guidelines:
     provides multiple commits in the same scope (for example, to the
     same new feature), each of the commits has a very specific
     purpose.
-    - For example, a line formating change followed by a chapter
+    - For example, a line formatting change followed by a chapter
       addition change in the same documentation file.
     - Also, it can be the case of two functional changes that are
       building blocks in the same scope.

@@ -28,7 +28,7 @@ git commit --signoff --author="Foo Bar <foo.bar@example.com>" -m "comment"
 ```
 
 By doing this developer states that they agree to the terms of
-`DCO<docs_dco>`{.interpreted-text role="ref"}
+[DCO](dco-signoff.md#docs_dco)
 
 The developer must make sure that they have rights to submit on behalf
 of the original author according to the license and/or author's

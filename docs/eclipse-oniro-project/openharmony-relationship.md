@@ -7,7 +7,7 @@ parent: Eclipse Oniro Project
 
 ## Eclipse Oniro Downstream Integration
 
-Eclipse Oniro currently bases its enhancements of OpenHarmony on the 6.0 release.
+Eclipse Oniro currently bases its enhancements of OpenHarmony on the 6.1 release.
 Newer versions will be targeted as they become available and used by the
 working group members. To collect enhancements and fixes, check for consistency, and 
 run them through continuous integration (CI), the project is using a downstream fork to 

@@ -1,7 +1,7 @@
 
 Eclipse Oniro is aiming to build a secure system from the foundation, applying the
 best industry practices in terms of development quality. However, as in
-every software projects, bugs do happen. This process explains how we
+every software project, bugs do happen. This process explains how we
 handle bugs.
 
 ## How to Report a Bug?
@@ -16,7 +16,7 @@ tracker](https://github.com/eclipse-oniro4openharmony/manifest/issues) and in th
 - What is the result you expect? (Expected behaviour)
 - Frequency? (always, sometimes, one-time issue)
 - Tested version (image name and version, platform)
-- Do you know any workaround of this issue? (link to
+- Do you know of any workaround for this issue? (link to
   workaround/mitigation steps etc)
 - Do you have a fix for this issue?
 
@@ -26,7 +26,7 @@ solution.
 
 ## Bug Triage
 
-The bug triage is a process where developers asses the bug and set its
+Bug triage is a process in which developers assess the bug and set its
 severity and domain. At the end of this process the bug will:
 
 - Be classified as a security issue, normal bug, feature request, or
@@ -37,7 +37,7 @@ severity and domain. At the end of this process the bug will:
 - Have its domain set. The bug tracker will include the latest list.
 
 If the bug is classified as a security vulnerability, the engineer
-assesing the issue will create a new ticket in the private security bug
+assessing the issue will create a new ticket in the private security bug
 tracker and the discussion will continue in the security bug tracker
 from that point. Please refer to the CVE Process for details.
 
@@ -73,7 +73,7 @@ However, we strongly prefer to upstream the fix first, and then get it
 with a regular upstream code update.
 
 Please note also that we periodically update maintained packages from
-upstream sources, regardless of the bugs filled in our system. Our goal
+upstream sources, regardless of the bugs filed in our system. Our goal
 is to update to the latest stable version of the package.
 
 ## Detailed Workflow
@@ -85,7 +85,7 @@ findings (like QA), partner findings, community, or security
 researchers. There might be also different ways the Project team learns
 about the issue, including Matrix channels, discussion forums etc.
 Issues coming from different sources are centralized in the bug tracker,
-which also provides an unified identification of all issues.
+which also provides a unified identification of all issues.
 
 ### Acknowledgement and Bug Triage
 

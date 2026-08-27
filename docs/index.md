@@ -7,7 +7,7 @@
 
 ## About Oniro
 
-[Oniro](https://oniroproject.org/) is an open-source, vendor-neutral Operating System (OS) managed by the [Eclipse Foundation](https://www.eclipse.org/). It is built upon the foundational layers of [OpenHarmony](https://gitcode.com/openharmony/docs), an open-source project incubated and operated by the [OpenAtom Foundation](https://www.openatom.org/). OpenHarmony is known for its distributed OS features that cater to a wide range of smart devices, regardless of their size. Oniro extends OpenHarmony code base with add-ons for the European and Global markets, such as [ReactNative](https://reactnative.dev/) support, [Eclipse Theia](https://theia-ide.org/) based IDE, [Servo](https://servo.org/) web engine, and more that are coming.
+[Oniro](https://oniroproject.org/) is an open-source, vendor-neutral Operating System (OS) managed by the [Eclipse Foundation](https://www.eclipse.org/). It is built upon the foundational layers of [OpenHarmony](https://gitcode.com/openharmony/docs), an open-source project incubated and operated by the [OpenAtom Foundation](https://www.openatom.org/). OpenHarmony is known for its distributed OS features that cater to a wide range of smart devices, regardless of their size. Oniro extends OpenHarmony code base with add-ons for the European and Global markets, such as [React Native](https://reactnative.dev/) support, [Eclipse Theia](https://theia-ide.org/) based IDE, [Servo](https://servo.org/) web engine, and more that are coming.
 
 ## The Project
 

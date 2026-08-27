@@ -197,7 +197,7 @@ BUSID  VID:PID    DEVICE                                                        
 
 In our case, we need take **busid** `1-17`.
 !!! note
-    If the status of **HDC Device** is **Not shared**, type `usbpid bind --busid 1-17`, in above case the device **busid** is 1-17, change it to adjust your case if necessary.
+    If the status of **HDC Device** is **Not shared**, type `usbipd bind --busid 1-17`, in above case the device **busid** is 1-17, change it to adjust your case if necessary.
 
     After re-running command `usbipd list`, you will find the device status changed into `Shared`.
 
@@ -232,7 +232,7 @@ To enable *programming mode* on the device, perform the following steps:
  1. Press and hold `VOL/RECOVERY` then `RESET` buttons.
  2. Release `RESET` button.
 
-When your run `flash/flash.py -q` again, you will find the output is `none` again. 
+When you run `flash/flash.py -q` again, the output is `none` because the device's USB identity has changed.
 
 Open **Windows PowerShell** again and type `usbipd list`, the output will be like the following:
 ```bash
@@ -267,7 +267,7 @@ minicom -D /dev/ttyUSB0 -b 1500000
 ```
 
 ## Reference
-The original specification and some hardware description comes form the original
+The original specification and some hardware descriptions come from the original
 (Chinese) HiHope documentation published on [Gitee](https://gitee.com/hihope_iot/docs/tree/master/HiHope_DAYU200).
 
-More details and purchase options can be found at the manufactures [product page](http://www.hihope.org/pro/pro1.aspx?mtt=54).
+More details and purchase options can be found on the manufacturer's [product page](http://www.hihope.org/pro/pro1.aspx?mtt=54).

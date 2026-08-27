@@ -15,7 +15,7 @@ Code Labs collect practical Oniro and OpenHarmony sample applications. Use these
 | Health              | [Workout Logbook](mobile/health.md)<br>[Water Tracker](mobile/health.md)                                        | Fitness logging and hydration tracking examples.                |
 | Information         | [PlayScout](mobile/information.md)<br>[Pokemon List](mobile/information.md)<br>[OniroNews](mobile/information.md) | Data browsing, listing, and news-style applications.            |
 | Utility             | [Time Around World](mobile/utility.md)<br>[Super Bright Flashlight](mobile/utility.md)<br>[BMI Calculator](mobile/utility.md)<br>[Quote Of The Day](mobile/utility.md)<br>[Unit Converter](mobile/utility.md)<br>[MyList](mobile/utility.md) | Everyday utility applications.                                  |
-| Video               | [Youtube](mobile/video.md)                                                                                       | Video-focused application example.                              |
+| Video               | [YouTube](mobile/video.md)                                                                                       | Video-focused application example.                              |
 | Weather             | [MyMeteo](mobile/weather.md)                                                                                     | Weather information application.                                |
 
 ## Wearable Applications

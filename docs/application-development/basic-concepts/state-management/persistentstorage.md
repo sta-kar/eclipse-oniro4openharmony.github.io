@@ -97,7 +97,7 @@ struct Index {
 - First running after fresh application installation:
   1. **persistProp** is called to initialize PersistentStorage. A search for the **aProp** attribute in PersistentStorage returns no result, because the application has just been installed.
   2. A search for the attribute **aProp** in AppStorage still returns no result.
-  3. Create the **aProp** attribute of the number type in AppStorge and initialize it with the value 47.
+  3. Create the **aProp** attribute of the number type in AppStorage and initialize it with the value 47.
   4. PersistentStorage writes the **aProp** attribute and its value **47** to the local device. The value of **aProp** in AppStorage and its subsequent changes are persisted.
   5. In the **Index** component, create the state variable **@StorageLink('aProp') aProp**, which creates a two-way synchronization with the **aProp** attribute in AppStorage. During the creation, the search in AppStorage for the **aProp** attribute is successful, and therefore, the state variable is initialized with the value **47** found in AppStorage.
 
@@ -142,4 +142,4 @@ if (AppStorage.get('aProp') > 50) {
 After reading the data stored in PersistentStorage, the sample code checks whether the value of **aProp** is greater than 50 and, if it is, sets **aProp** to **47** through an API in AppStorage.
 
 ### Additional Information
-For additional information please refer to the [ArkTS PersistStorage](https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-5.1.0-Release/en/application-dev/quick-start/arkts-persiststorage.md)
+For more information, see [ArkTS PersistentStorage](https://github.com/eclipse-oniro-mirrors/docs/blob/OpenHarmony-5.1.0-Release/en/application-dev/ui/state-management/arkts-persiststorage.md).

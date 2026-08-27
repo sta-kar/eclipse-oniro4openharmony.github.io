@@ -140,7 +140,7 @@ An `Object` class type is a base type for all reference types. Any value, includ
 
 #### `Array` Type
 
-An `array` is an object comprised of elements of data types assignable to the element type specified in the array declaration.
+An `array` is an object composed of elements whose data types are assignable to the element type specified in the array declaration.
 A value of an `array` is set by using an *array composite literal*, which is a list of zero or more expressions enclosed in square brackets ([]). Each expression represents an element of the `array`. The length of the `array` is set by the number of expressions. The index of the first array element is 0.
 
 The following example creates an `array` with three elements:
@@ -378,7 +378,7 @@ for ([init]; [condition]; [update]) {
 When a `for` statement is executed, the following process takes place:
 
 1. An `init` expression is executed, if any. This expression usually initializes one or more loop counters.
-2. The condition is evaluated. If the value of condition is truthy(a value that is considered `true`), or if the conditional expression is omitted, then the statements in the `for` body are to be executed. If the value of condition is falsy(a value that is considered `false`), then the `for` loop terminates.
+2. The condition is evaluated. If the value of the condition is truthy (a value that is considered `true`), or if the conditional expression is omitted, then the statements in the `for` body are executed. If the value of the condition is falsy (a value that is considered `false`), then the `for` loop terminates.
 3. The statements of the `for` body are executed.
 4. If there is an `update` expression, then the `update` expression is executed.
 5. Go back to step 2.
@@ -1732,8 +1732,8 @@ Y // denotes Y from Utils
 X // Compile-time error: 'X' is not visible
 ```
 ##### Dynamic Import
-Unlike static import, static import allows you to load a module conditionally or on demand.
-The **import() **syntax, commonly called dynamic import, is a function-like expression that allows for dynamic loading of a module. It returns a promise.
+Unlike static import, dynamic import allows you to load a module conditionally or on demand.
+The **`import()`** syntax, commonly called dynamic import, is a function-like expression that allows a module to be loaded dynamically. It returns a promise.
 In the following example, **import(modulePath)** loads the module and returns a promise that resolves into a module object that contains all its exports. This expression can be called from any place in the code.
 
 ```typescript
@@ -1827,4 +1827,4 @@ The keyword `this` used as a primary expression denotes a value that is a refere
 The value denoted by `this` in a lambda body and in the surrounding context is the same.
 
 ## Reference
-For additional information please refer to the [ArkTS Basics](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/quick-start/introduction-to-arkts.md#the-basics)
+For more information, see [ArkTS Basics](https://gitcode.com/openharmony/docs/blob/master/en/application-dev/quick-start/introduction-to-arkts.md#the-basics).

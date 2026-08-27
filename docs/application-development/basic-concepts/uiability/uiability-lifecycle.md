@@ -4,7 +4,7 @@
 
 When a user opens or switches to and from an application, the UIAbility instances in the application transit in their different states. The UIAbility class provides a series of callbacks. Through these callbacks, you can know the state changes of the UIAbility instance.
 
-The lifecycle of UIAbility has the following states: **Create**, **Foreground**, **Background**, **Destroy**, **onWindowStageCrate** and **onWindowStageDestory** as shown in the figure below.
+The UIAbility lifecycle has four main states: **Create**, **Foreground**, **Background**, and **Destroy**. Window-stage creation and destruction are reported separately through the `onWindowStageCreate()` and `onWindowStageDestroy()` callbacks, as shown in the figure below.
 
 **Figure 1** UIAbility lifecycle states
 
@@ -15,8 +15,7 @@ The lifecycle of UIAbility has the following states: **Create**, **Foreground**,
 ## Description of Lifecycle States
 
 !!! note
-    If you want to check the sample code below, because of limited functionailities of **Previewer**, you need to use real device instead. 
-    Before proceeding, make sure you finished reading **[Running the Application on a real Device](../../create-first-eclipse-oniro-app/mobile/run-real-device.md)** tutorial.
+    Because the **Previewer** has limited functionality, run the sample code below on the [DevEco emulator](../../environment-setup-guide/deveco-studio/emulator.md#running-your-app-on-the-emulator) or the [Oniro emulator](../../environment-setup-guide/oniro/build-run.md#core-workflow).
 
 ### Create
 

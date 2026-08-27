@@ -14,12 +14,12 @@ The latest version of the Oniro Project documentation is available at: [docs.oni
 ## Building the Documentation Locally
 ### Prerequisites
 
-To build and preview the documentation on your local machine(We use Windows system here), ensure that `Python 3.12`(or higher version) and `pip` are installed, then follow these steps:
+To build and preview the documentation on your local machine (We use Windows system here), ensure that `Python 3.12` (or higher version) and `pip` are installed, then follow these steps:
 
 1. Clone this repository:
    ```sh
    git clone https://github.com/eclipse-oniro4openharmony/eclipse-oniro4openharmony.github.io.git
-   cd oniro-docs
+   cd eclipse-oniro4openharmony.github.io
    ```
 
 2. Install virtual environment:
@@ -40,7 +40,7 @@ To build and preview the documentation on your local machine(We use Windows syst
    ```sh
    mkdocs serve
    ```
-6. Open `http://localhost:8000/mkdocs/` in your web browser to view the documentation.
+6. Open `http://localhost:8000/` in your web browser to view the documentation.
 
 ## Publishing on GitHub Pages
 
