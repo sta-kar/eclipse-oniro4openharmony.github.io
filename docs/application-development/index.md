@@ -22,7 +22,7 @@ For detailed instructions, see the [Environment Setup Guide](environment-setup-g
 ## Learning Path
 To support your application development, we provide comprehensive development guidelines.
 
-You can familiarize yourself with the application development process by [getting started with a simple project](create-first-eclipse-oniro-app/index.md).
+You can familiarize yourself with the application development process by [getting started with a simple project](create-your-first-app/index.md).
 
 ## OpenHarmony Version and API Level Reference
 

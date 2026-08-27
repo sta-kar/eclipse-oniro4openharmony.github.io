@@ -16,7 +16,7 @@ The UIAbility lifecycle has four main states: **Create**, **Foreground**, **Back
 
 !!! note
     Because the **Previewer** has limited functionality, run the sample code below on a physical device.
-    Before proceeding, make sure you finished reading **[Running the Application on a real Device](../../create-first-eclipse-oniro-app/run-real-device.md)** tutorial.
+    Before proceeding, make sure you finished reading **[Running the Application on a real Device](../../create-your-first-app/run-real-device.md)** tutorial.
 
 ### Create
 
