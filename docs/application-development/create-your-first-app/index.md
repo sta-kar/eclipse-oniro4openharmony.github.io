@@ -22,25 +22,13 @@ In this tutorial, you will create your first Eclipse Oniro application from DevE
 
 #### What You Will Learn  
 
-- **Set Up DevEco Studio**: Install and configure the necessary environment for application development.
-<br>
-
-- **Create a New Project**: Use the **Empty Ability** template and set the project runtime to OpenHarmony.
-<br>
-
-- **Explore the Project Structure**: Navigate different views, such as Ohos and Project Files, to locate and manage files.
-<br>
-
-- **Use the Previewer**: Learn how to preview UI updates in real time, switch devices, rotate screens, and inspect components.
+- **Project Structure**: Understand top-level project layout and several important files and directories.
 <br>
 
 - **Build UI Components**: Add Text and Button components to display messages and handle user interactions.
 <br>
 
 - **Implement Page Navigation**: Use the router module to enable redirection between pages with transition effects.
-<br>
-
-- **Deploy on a Real Device**: Connect a physical device or wearable over USB or Wi-Fi and run the application on it.
 <br>
 
 #### What You Will Build

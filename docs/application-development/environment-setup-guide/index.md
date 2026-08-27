@@ -47,7 +47,7 @@ Before setting up your development environment, review the relationship between 
 DevEco Studio is a Huawei IDE based on IntelliJ IDEA. It supports application development with an advanced HarmonyOS emulator and is available for Windows and macOS.
 
 !!! warning "Warning"
-    DevEco Studio's emulator only runs on Apple Silicon (ARM) Macs. On an Intel-based Mac, use a [physical device](deveco-studio/real-device.md) instead.
+    DevEco Studio's emulator isn't available on Intel-based Macs. Use a [physical device](deveco-studio/real-device.md) instead.
 
 ## Oniro App Builder & IDE 
 
