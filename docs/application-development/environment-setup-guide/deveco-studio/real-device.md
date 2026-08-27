@@ -9,7 +9,7 @@ Physical devices generally provide more representative performance and let you t
 3. Accept the debugging authorization prompt on the device the first time it connects.
 4. The device should now appear in DevEco Studio's target device dropdown in the toolbar.
 
-If the device is not detected, follow the USB-connection troubleshooting steps in [Common Issues and Solutions](first-app.md#common-issues-and-solutions). USB power management often causes unstable connections on Windows.
+If the device is not detected, USB power management often causes unstable connections on Windows — try a different port or cable.
 
 ## Connecting via IP Address (Wi-Fi)
 

@@ -81,7 +81,7 @@ Device Manager's **Your Devices** page lists existing emulators under the **Loca
 * **Cold boot** — starts the emulator from a clean state every time. Slower, but useful when you need to rule out state left over from a previous run.
 * **Quick boot** — resumes from a saved snapshot, which is much faster for everyday iteration.
 
-If an emulator becomes unresponsive or enters an invalid state, such as the "Unable to Find the BMS Service" problem described in [Common Issues and Solutions](first-app.md#common-issues-and-solutions), perform a cold boot or wipe its data.
+If an emulator becomes unresponsive or enters an invalid state, such as the "Unable to Find the BMS Service" problem, perform a cold boot or wipe its data.
 
 ## Running Your App on the Emulator
 
@@ -95,4 +95,4 @@ If an emulator becomes unresponsive or enters an invalid state, such as the "Una
 * **Emulator does not start or displays a black screen** — confirm that virtualization is enabled in the BIOS or UEFI settings on Windows. Check whether other virtualization software, such as Hyper-V or VirtualBox, conflicts with it.
 * **Slow performance** — close unused emulators, allocate more RAM/CPU cores to the virtual device in its configuration, and prefer a lower-resolution device profile for quick UI checks.
 * **System image download stuck or failing** — verify your network/proxy configuration and that the selected image is available for your host platform and account region.
-* **App fails to install on the emulator** — see the `compileSdkVersion`/permission-related entries in [Common Issues and Solutions](first-app.md#common-issues-and-solutions).
+* **App fails to install on the emulator** — see the `compileSdkVersion` vs. `compatibleSdkVersion` vs. `targetSdkVersion` note above, and check the app's requested permissions.
