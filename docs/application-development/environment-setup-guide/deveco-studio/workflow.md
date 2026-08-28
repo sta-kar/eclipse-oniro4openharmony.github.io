@@ -10,9 +10,9 @@ DevEco Studio is built on the IntelliJ Platform, so if you have used Android Stu
 
 When no project is open, DevEco Studio shows the **Welcome** screen with:
 
-* **Create Project** – start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
-* **Open** – open an existing project directory.
-* **Clone repository** – clone a Git repository directly.
+* **Create Project** — start a project from a HarmonyOS template (Empty Ability, Native C++, and more). Configure the generated project for OpenHarmony when that is the target runtime.
+* **Open** — open an existing project directory.
+* **Clone repository** — clone a Git repository directly.
 * A list of recently opened projects.
 
 <img src="../images/deveco_starting_screen_2.png">
@@ -49,11 +49,11 @@ Once a project is open, the main window is split into the following regions:
 !!! note "Project view switcher"
     The dropdown at the top of the **Project** tool window (default label `Project`) lets you switch between several file tree presentations, including:
 
-    * **Project** – the raw directory structure on disk.
-    * **Project Files** – filters out most build/IDE metadata so only source-relevant files remain.
-    * **Open Files** – quickly jump between recently viewed files.
-    * **Scratches and Consoles** – lists scratch files and console histories, which live outside the project directory and are not tied to version control.
-    * **Ohos** – presents only the files required for development, helping you locate the application's core code and resources. This is usually the most convenient view for day-to-day OpenHarmony application development.
+    * **Project** — the raw directory structure on disk.
+    * **Project Files** — filters out most build/IDE metadata so only source-relevant files remain.
+    * **Open Files** — quickly jump between recently viewed files.
+    * **Scratches and Consoles** — lists scratch files and console histories, which live outside the project directory and are not tied to version control.
+    * **Ohos** — presents only the files required for development, helping you locate the application's core code and resources. This is usually the most convenient view for day-to-day OpenHarmony application development.
 
 ### Essential Shortcuts
 

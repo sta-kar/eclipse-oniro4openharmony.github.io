@@ -75,11 +75,9 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     <img src='../images/windows_setup2.png' alt="Installation Options step: desktop shortcut, PATH variable, and context menu checkboxes">
 
-    In the **Choose Start Menu Folder** step, keep the default settings and click `Install`.
+    In the **Choose Start Menu Folder** step, keep the default settings and click **Install**.
 
     <img src='../images/windows_setup3.png' alt="Choose Start Menu Folder step with the Install button">
-
-    DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 === "macOS"
     Open the downloaded `.dmg` file, then drag **DevEco-Studio** into the **Applications** folder shown in the same window.
@@ -90,13 +88,13 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     On first launch, macOS Gatekeeper may block the app since it was downloaded from outside the App Store — if so, go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
-## DevEco Studio Initial Setup
+### Initial Setup
 
-When you run DevEco Studio for the first time, the setup wizard will appear. This first-run wizard is the same on Windows and macOS — the screenshots below are from Windows, but macOS shows the same dialogs (just with macOS-style window chrome instead of the Windows title bar).
+When you run DevEco Studio for the first time, follow the setup wizard that appears. You need to accept the terms and conditions to move forward.
 <img src='../images/deveco_welcome_screen.png'>
 
-!!! note "macOS Gatekeeper / User Agreement"
-    On macOS, a **User Agreement** dialog may appear before the wizard and ask you to accept the "HarmonyOS Software License and Service Agreement." Accept it to continue. If macOS prevents the application from opening, see the Gatekeeper note in [Step-by-Step Installation](#step-by-step-installation).
+!!! note "Note"
+    DevEco Studio bundles OpenJDK, so a separate JDK installation is not required for basic use.
 
 !!! note "Behind a proxy"
     If your network requires a proxy, configure it now under **Settings → Appearance & Behavior → System Settings → HTTP Proxy** — otherwise the steps below may fail to download SDK components.
@@ -114,8 +112,7 @@ The environment configuration is now complete.
 
 To run applications for OpenHarmony, you also need to install the relevant APIs.
 
-Open **DevEco Studio** and go to:
-  `Settings` → `OpenHarmony SDK`, check the API version(s) you need and click **Apply** to download.
+Open **DevEco Studio** and go to `Settings` → `OpenHarmony SDK`. Check the API version(s) you need and click **Apply** to download.
 
 You don't strictly have to do this ahead of time — if a project needs an API version you haven't installed yet, DevEco Studio will prompt you to download it automatically the first time you build or run the app.
 
@@ -123,6 +120,6 @@ With **DevEco Studio 6.1**, select **API Version 23** for development.
 
 Refer to the [version mapping table](../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
-![OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components](images/deveco_api_screen.png){: .center}
+<img src='images/deveco_api_screen.png' alt="OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components">
 
 After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [IDE Basics](workflow.md) to explore the IDE.

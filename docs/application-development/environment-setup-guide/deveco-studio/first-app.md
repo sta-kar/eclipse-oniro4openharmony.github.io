@@ -8,7 +8,7 @@ With DevEco Studio installed and its layout, project structure, and tooling cove
 2. Select a template. **Empty Ability** is the simplest starting point for a Stage-model application and is the best choice for a first project. Other templates add sample UI that is not needed at this stage.
 3. Fill in the project details:
     * **Project name** — a human-readable label used only within DevEco Studio.
-    * **Bundle name** — A reverse-domain-style identifier that follows the pattern `com.organisation_name.application_name`.
+    * **Bundle name** — a reverse-domain-style identifier that follows the pattern `com.organisation_name.application_name`.
     * **Save location** — the directory on disk where the project is created.
     * **Compile/Compatible API** — match this to the OpenHarmony version you intend to run against (see the version/API table in the [Environment Setup Guide overview](../index.md#openharmony-version-and-api-level-reference)).
     * **Module name** — name of the default module DevEco Studio creates (usually `entry`); becomes both the module's folder name and its `name` field in `module.json5` (see [entry Module](../../create-your-first-app/project-structure.md#entry-module)).

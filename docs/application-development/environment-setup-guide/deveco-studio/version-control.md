@@ -14,9 +14,7 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 * A diff preview for the selected file.
 * A commit message box, plus **Commit** and **Commit and Push** buttons.
 
-<img src='../images/deveco_version_control.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
-
-<img src='../images/deveco_version_control_2.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
+<img src='../images/deveco_version_control_2.png' alt="Full DevEco Studio IDE with the Commit tool window open, listing unversioned files staged for the initial commit alongside the editor and Git Log tab">
 
 !!! note "Note"
     Review each changed file in the Commit window before committing. This is equivalent to reviewing `git diff` before `git add`, but the diff is displayed in the editor.
@@ -24,6 +22,8 @@ Open it with `Alt+9` or **View → Tool Windows → Commit**. It shows:
 ## Branch Management
 
 The branch indicator in the lower-right status bar opens a menu for checking out, creating, renaming, or merging branches without a terminal. After you fetch, it also shows incoming and outgoing commit counts.
+
+<img src='../images/deveco_version_control.png' alt="Version Control tool window's Git Log tab, showing the Local/master branch tree and a Commit local changes link">
 
 !!! note "Note"
     **Update Project** (`Ctrl+T`) fetches and merges or rebases according to your configured settings. To inspect remote changes without modifying the working tree, use **Git → Fetch** instead.

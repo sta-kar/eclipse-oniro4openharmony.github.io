@@ -40,7 +40,7 @@ Switch between individual device profiles to see how the application appears on 
 
 ## Multi-Device Preview
 
-Click the device selector above the Previewer canvas to render the same page across several device profiles at once, such as phone, tablet, foldable, and wearable profiles. This helps you identify layout problems on smaller or larger screens before using an emulator.
+Click the device selector above the Previewer canvas to render the same page across several device profiles at once, such as phone, tablet, foldable, and wearable. This helps you identify layout problems on smaller or larger screens before using an emulator.
 
 !!! note "Note"
     Keep at least one small-screen and one large-screen profile enabled for any page with a complex layout. Most responsive-layout problems appear immediately in this comparison view.
