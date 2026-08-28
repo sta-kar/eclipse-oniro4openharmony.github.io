@@ -88,9 +88,7 @@ The latest version of DevEco Studio can be downloaded from the [official downloa
 
     On first launch, macOS Gatekeeper may block the app since it was downloaded from outside the App Store — if so, go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
-### Initial Setup
-
-When you run DevEco Studio for the first time, follow the setup wizard that appears. You need to accept the terms and conditions to move forward.
+When you run DevEco Studio for the first time, you need to accept the terms and conditions to move forward.
 <img src='../images/deveco_welcome_screen.png'>
 
 !!! note "Note"
@@ -120,6 +118,6 @@ With **DevEco Studio 6.1**, select **API Version 23** for development.
 
 Refer to the [version mapping table](../index.md#openharmony-version-and-api-level-reference) to choose the appropriate API level for your target OpenHarmony system.
 
-<img src='images/deveco_api_screen.png' alt="OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components">
+<img src='../images/deveco_api_screen.png' alt="OpenHarmony SDK settings page listing API versions 23, 20, 18, and 15 with their ArkTS/JS/Native/Previewer/Toolchains components">
 
 After setting up a developer account, installing DevEco Studio, and configuring the environment, continue to [IDE Basics](workflow.md) to explore the IDE.
